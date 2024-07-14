@@ -12,6 +12,7 @@ export default function Hero() {
             justifyContent={'center'}
             alignItems={'center'}
             fontFamily={'Roobert Pro'}
+            px={'24px'}
         >
             <Box
             w={'full'}
