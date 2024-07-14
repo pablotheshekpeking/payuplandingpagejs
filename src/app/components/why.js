@@ -12,7 +12,7 @@ export default function Why() {
             justifyContent={'center'}
             alignItems={'center'}
             px={['50px', '50px', '200px', '200px']}
-            pt={['1000px', '1000px', '0px', '0px']}
+            pt={['1100px', '1100px', '0px', '0px']}
         >
             <Box
                 w={'full'}
