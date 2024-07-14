@@ -19,7 +19,7 @@ export default function Home() {
       m={'0px'}
       p={'0px'}
     >
-      <Center w={'full'} display={'flex'} justifyContent={'center'} pt={'24px'} position={'fixed'} w={'100%'} >
+      <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} w={'100%'} >
         <Navbar />
       </Center>
 
