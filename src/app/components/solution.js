@@ -11,7 +11,7 @@ export default function Solution() {
         w={'full'}
         h={'100vh'}
         justifyContent={'center'}
-        pt={'200px'}
+        pt={['0px', '0px', '200px', '200px']}
         >
         <Box
         w={'full'}

@@ -21,7 +21,7 @@ export default function Hero() {
             justifyContent={'center'}
             alignItems={'center'}
             >
-                <Text pt={'50px'} fontSize={['30px', '30px', '64px', '64px']} fontWeight={'700'}>Pay bills conveniently!</Text>
+                <Text pt={['0px', '0px', '50px', '50px']} fontSize={['30px', '30px', '64px', '64px']} fontWeight={'700'}>Pay bills conveniently!</Text>
                 <Box w={'1230px'} h={['auto', 'auto', 'auto', '359px']} maxW={'full'}>
                     <svg width="100%" height="100%" viewBox="0 0 1230 415" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="8" y="64" width="1222" height="351" fill="black" />
