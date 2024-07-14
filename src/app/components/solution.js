@@ -1,0 +1,40 @@
+'use client'
+
+import { Box, Text } from "@chakra-ui/react";
+import Image from "next/image";
+
+export default function Solution() {
+    return (
+        <Box
+            w={'full'}
+            display={'flex'}
+            flexDirection={['column', 'column', 'row', 'row']}
+            alignItems={'center'}
+            h={'100vh'}
+            justifyContent={'center'}
+            gap={['50px', '50px', '160px', '160px']}
+        >
+            <Text
+                w={['100%', '100%', '493px', '493px']}
+                h={['100px', '100px', '231px', '231px']}
+                fontWeight={400}
+                fontSize={['15px', '15px', '20px', '20px']}
+            >
+                <span style={{ fontSize: ['15px', '15px', '30px', '30px'] }}>
+                    Creating a <span style={{ fontWeight: 700 }}>financial solution</span> for our currency to thrive.
+                </span>
+                {' '}
+                With our peer-to-peer system, footing bills and invoices have been made easier. All you need to do is fund your Payup account with NGN.
+            </Text>
+
+
+            <Box
+                w={'650px'}
+                h={'423px'}
+                maxW={'100%'}
+            >
+                <Image src={'/solution.png'} width={650} height={423} />
+            </Box>
+        </Box>
+    );
+}
