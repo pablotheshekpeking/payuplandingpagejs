@@ -17,7 +17,7 @@ export default function Home() {
       px={['10px', '10px', '', '']}
       scrollBehavior={'smooth'}
     >
-      <Box pt={'24px'} position={'fixed'} w={'100%'} px={'24px'}>
+      <Box w={'full'} display={'flex'} justifyContent={'center'} pt={'24px'} position={'fixed'} w={'100%'} px={'24px'}>
         <Navbar />
       </Box>
 
