@@ -26,8 +26,9 @@ export default function Solution() {
                 h={['100px', '100px', '231px', '231px']}
                 fontWeight={400}
                 fontSize={['15px', '15px', '20px', '20px']}
+                fontFamily={'Roobert Pro'}
             >
-                <span style={{ fontSize: ['15px', '15px', '30px', '30px'] }}>
+                <span style={{ fontSize: ['15px', '15px', '30px', '30px'], fontFamily: 'Roobert Pro' }}>
                     Creating a <span style={{ fontWeight: 700 }}>financial solution</span> for our currency to thrive.
                 </span>
                 {' '}

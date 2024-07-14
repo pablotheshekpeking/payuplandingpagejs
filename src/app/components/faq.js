@@ -19,6 +19,7 @@ export default function FAQ() {
             display={'flex'}
             flexDirection={'column'}
             justifyContent={'center'}
+            fontFamily={'Roobert Pro'}
         >
             <Text fontWeight={600} fontSize={['40px', '40px', '64px', '64px']}>FAQs</Text>
             <Accordion w={'full'} allowMultiple>

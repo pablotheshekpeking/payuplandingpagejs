@@ -30,11 +30,12 @@ export default function Open() {
             maxW={'100%'}
             textAlign={'center'}
             pt={'30px'}
+            fontFamily={'Roobert Pro'}
             >
                 A world where you can effortlessly transact across continents as easily as you would in your local shop {" "} <span style={{ fontWeight: 700 }}>"your conduit to efficient and secure international transactions"</span> .
             </Text>
 
-            <Button bg={'black'} color={'#FFF239'} mt={'30px'}>
+            <Button bg={'black'} color={'#FFF239'} mt={'30px'} fontFamily={'Roobert Pro'}>
                 Open a Payup account
             </Button>
         </Box>

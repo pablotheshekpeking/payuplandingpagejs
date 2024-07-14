@@ -7,6 +7,7 @@ import Why from "./components/why";
 import BigImg from "./components/bigimage";
 import Open from "./components/openaccount";
 import FAQ from "./components/faq";
+import "../../public/global.css"
 
 export default function Home() {
   return (

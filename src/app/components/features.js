@@ -31,6 +31,7 @@ export default function Features() {
                     fontSize={'18px'}
                     lineHeight={'40px'}
                     fontWeight={'400'}
+                    fontFamily={'Roobert Pro'}
                 >
                     Manage , pay and reconcile reoccuring bills and invoices
                 </Text>
@@ -57,6 +58,7 @@ export default function Features() {
                     fontSize={'18px'}
                     lineHeight={'40px'}
                     fontWeight={'400'}
+                    fontFamily={'Roobert Pro'}
                 >
                     Easily save in any currency and track your equivalents as market rates change.
                 </Text>
@@ -84,6 +86,7 @@ export default function Features() {
                     fontSize={'18px'}
                     lineHeight={'40px'}
                     fontWeight={'400'}
+                    fontFamily={'Roobert Pro'}
                 >
                     Create your own contactless prepaid card for unlimited shopping with your chosen plan.
                 </Text>
@@ -111,6 +114,7 @@ export default function Features() {
                     fontSize={'18px'}
                     lineHeight={'40px'}
                     fontWeight={'400'}
+                    fontFamily={'Roobert Pro'}
                 >
                     Transfer funds or pay a bill with Pay Up. Gift and make loved ones smile.
                 </Text>

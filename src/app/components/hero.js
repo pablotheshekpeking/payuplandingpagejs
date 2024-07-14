@@ -11,6 +11,7 @@ export default function Hero() {
             flexDirection={'column'}
             justifyContent={'center'}
             alignItems={'center'}
+            fontFamily={'Roobert Pro'}
         >
             <Box
             w={'full'}

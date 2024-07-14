@@ -24,6 +24,7 @@ export default function Navbar() {
             justifyContent={'space-between'}
             p={'8px'}
             px={'20px'}
+            fontFamily={'Roobert Pro'}
         >
             {/*** payuo logo */}
             <Box
