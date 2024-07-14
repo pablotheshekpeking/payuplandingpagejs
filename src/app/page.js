@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Center } from "@chakra-ui/react";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Solution from "./components/solution";
@@ -17,9 +17,9 @@ export default function Home() {
       px={['10px', '10px', '', '']}
       scrollBehavior={'smooth'}
     >
-      <Box w={'full'} display={'flex'} justifyContent={'center'} pt={'24px'} position={'fixed'} w={'100%'} px={'24px'}>
+      <Center w={'full'} display={'flex'} justifyContent={'center'} pt={'24px'} position={'fixed'} w={'100%'} >
         <Navbar />
-      </Box>
+      </Center>
 
       <Hero />
 
