@@ -14,10 +14,6 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 export default function Navbar() {
     return (
         <Box
-        w={'100%'}
-        bg={'black'}
-        >
-        <Box
             w={'full'}
             h={'auto'}
             bg={'white'}
@@ -101,7 +97,6 @@ export default function Navbar() {
             </Popover>
             </Show>
 
-        </Box>
         </Box>
     );
 }
