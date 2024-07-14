@@ -30,7 +30,7 @@ export default function Home() {
 
       <BigImg />
 
-      <Open />
+      {/**<Open />*/}
 
       <FAQ />
 

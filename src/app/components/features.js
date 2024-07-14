@@ -10,9 +10,10 @@ export default function Features() {
             display={'grid'}
             gridTemplateColumns="repeat(auto-fit, minmax(200px, 1fr))"
             gap={'24px'}
+            px={'24px'}
         >
             <Box
-                h={['250px', '250px', '328px', '328px']}
+                h={'auto'}
                 bg={'white'}
                 borderRadius={'12px'}
                 p={'40px'}
@@ -27,7 +28,7 @@ export default function Features() {
                 </svg>
 
                 <Text
-                    fontSize={'20px'}
+                    fontSize={'18px'}
                     lineHeight={'40px'}
                     fontWeight={'400'}
                 >
@@ -37,7 +38,7 @@ export default function Features() {
             </Box>
 
             <Box
-                h={['250px', '250px', '328px', '328px']}
+                h={'auto'}
                 bg={'white'}
                 borderRadius={'12px'}
                 p={'40px'}
@@ -53,7 +54,7 @@ export default function Features() {
 
 
                 <Text
-                    fontSize={'20px'}
+                    fontSize={'18px'}
                     lineHeight={'40px'}
                     fontWeight={'400'}
                 >
@@ -63,7 +64,7 @@ export default function Features() {
             </Box>
 
             <Box
-                h={['250px', '250px', '328px', '328px']}
+                h={'auto'}
                 bg={'white'}
                 borderRadius={'12px'}
                 p={'40px'}
@@ -80,7 +81,7 @@ export default function Features() {
 
 
                 <Text
-                    fontSize={'20px'}
+                    fontSize={'18px'}
                     lineHeight={'40px'}
                     fontWeight={'400'}
                 >
@@ -90,7 +91,7 @@ export default function Features() {
             </Box>
 
             <Box
-                h={['250px', '250px', '328px', '328px']}
+                h={'auto'}
                 bg={'white'}
                 borderRadius={'12px'}
                 p={'40px'}
@@ -107,7 +108,7 @@ export default function Features() {
 
 
                 <Text
-                    fontSize={'20px'}
+                    fontSize={'18px'}
                     lineHeight={'40px'}
                     fontWeight={'400'}
                 >

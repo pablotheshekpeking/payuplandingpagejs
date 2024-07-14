@@ -22,12 +22,12 @@ export default function FAQ() {
         >
             <Text fontWeight={600} fontSize={['40px', '40px', '64px', '64px']}>FAQs</Text>
             <Accordion w={'full'} allowMultiple>
-                <AccordionItem border={'1px solid black'}>
+                <AccordionItem borderBottom={'1px black'} borderTop={'1px solid black'} py={'16px'}>
                     {({ isExpanded }) => (
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left'>
+                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                         What is Payup?
                                     </Box>
                                     {isExpanded ? (
@@ -47,12 +47,12 @@ export default function FAQ() {
                     )}
                 </AccordionItem>
 
-                <AccordionItem border={'1px solid black'}>
+                <AccordionItem borderBottom={'1px black'} borderTop={'1px solid black'} py={'16px'}>
                     {({ isExpanded }) => (
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left'>
+                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                     What does Contactless payment mean?
                                     </Box>
                                     {isExpanded ? (
@@ -72,12 +72,12 @@ export default function FAQ() {
                     )}
                 </AccordionItem>
 
-                <AccordionItem border={'1px solid black'}>
+                <AccordionItem borderBottom={'1px black'} borderTop={'1px solid black'} py={'16px'}>
                     {({ isExpanded }) => (
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left'>
+                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                     How do you deposit money on Payup
                                     </Box>
                                     {isExpanded ? (
@@ -97,12 +97,12 @@ export default function FAQ() {
                     )}
                 </AccordionItem>
 
-                <AccordionItem border={'1px solid black'}>
+                <AccordionItem borderBottom={'1px black'} borderTop={'1px solid black'} py={'16px'}>
                     {({ isExpanded }) => (
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left'>
+                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                     How do you pay your bills?
                                     </Box>
                                     {isExpanded ? (
@@ -122,12 +122,12 @@ export default function FAQ() {
                     )}
                 </AccordionItem>
 
-                <AccordionItem border={'1px solid black'}>
+                <AccordionItem borderBottom={'1px solid black'} borderTop={'1px solid black'} py={'16px'}>
                     {({ isExpanded }) => (
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left'>
+                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                     Where can i find my account information?
                                     </Box>
                                     {isExpanded ? (

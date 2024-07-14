@@ -11,7 +11,7 @@ export default function Why() {
             display={'flex'}
             justifyContent={'center'}
             alignItems={'center'}
-            px={['50px', '50px', '100px', '100px']}
+            px={['50px', '50px', '200px', '200px']}
             pt={['900px', '900px', '0px', '0px']}
         >
             <Box

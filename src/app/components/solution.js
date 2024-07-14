@@ -6,11 +6,18 @@ import Image from "next/image";
 export default function Solution() {
     return (
         <Box
-            w={'full'}
+        display={'flex'}
+        alignItems={'center'}
+        w={'full'}
+        h={'100vh'}
+        justifyContent={'center'}
+        pt={'200px'}
+        >
+        <Box
+        w={'full'}
+        h={'100%'}
             display={'flex'}
             flexDirection={['column', 'column', 'row', 'row']}
-            alignItems={'center'}
-            h={'100vh'}
             justifyContent={'center'}
             gap={['50px', '50px', '160px', '160px']}
         >
@@ -35,6 +42,7 @@ export default function Solution() {
             >
                 <Image src={'/solution.png'} width={650} height={423} />
             </Box>
+        </Box>
         </Box>
     );
 }
