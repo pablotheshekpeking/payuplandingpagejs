@@ -8,6 +8,7 @@ import BigImg from "./components/bigimage";
 import Open from "./components/openaccount";
 import FAQ from "./components/faq";
 import "../../public/global.css"
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       m={'0px'}
       p={'0px'}
     >
-      <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} w={'100%'} >
+      <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} >
         <Navbar />
       </Center>
 
@@ -36,6 +37,8 @@ export default function Home() {
       {/**<Open />*/}
 
       <FAQ />
+
+      <Contact />
 
     </Box>
   );

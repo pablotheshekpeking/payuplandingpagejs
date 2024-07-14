@@ -11,11 +11,11 @@ export default function BigImg() {
             display={'flex'}
             justifyContent={'center'}
             alignItems={'center'}
-            px={['0px', '0px', '100px', '100px']}
+            px={['24px', '24px', '100px', '100px']}
         >
             <Box
                 w={'full'}
-                h={'auto'}
+                h={['1000px', '1000px', 'auto', 'auto']}
             >
                 <svg width="100%" height="100%" viewBox="0 0 1526 608" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M437 64L614.5 188.5" stroke="black" stroke-dasharray="4 4" />

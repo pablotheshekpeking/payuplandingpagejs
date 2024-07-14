@@ -28,7 +28,7 @@ export default function FAQ() {
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
+                                    <Box className="accordiontitle" as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                         What is Payup?
                                     </Box>
                                     {isExpanded ? (
@@ -53,7 +53,7 @@ export default function FAQ() {
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
+                                    <Box className="accordiontitle"  as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                     What does Contactless payment mean?
                                     </Box>
                                     {isExpanded ? (
@@ -78,7 +78,7 @@ export default function FAQ() {
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
+                                    <Box className="accordiontitle"  as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                     How do you deposit money on Payup
                                     </Box>
                                     {isExpanded ? (
@@ -103,7 +103,7 @@ export default function FAQ() {
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
+                                    <Box className="accordiontitle"  as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                     How do you pay your bills?
                                     </Box>
                                     {isExpanded ? (
@@ -128,7 +128,7 @@ export default function FAQ() {
                         <>
                             <h2>
                                 <AccordionButton>
-                                    <Box as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
+                                    <Box className="accordiontitle"  as='span' flex='1' textAlign='left' fontSize={['12px', '12px', '16px', '16px']}>
                                     Where can i find my account information?
                                     </Box>
                                     {isExpanded ? (
