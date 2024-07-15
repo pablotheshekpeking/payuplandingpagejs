@@ -92,7 +92,7 @@ export default function Contact() {
 
             <Box
                 w={['full', 'full', '50%', '50%']}
-                h={'560px'}
+                h={'auto'}
             >
                 <Image src={'/contact.png'} width={824} height={560} />
 
