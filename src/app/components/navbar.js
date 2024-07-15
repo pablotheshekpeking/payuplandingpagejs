@@ -64,6 +64,7 @@ export default function Navbar() {
                 </Stack>
             </Hide>
 
+            {/*** mobile navbar */}
             <Show below='md'>
             <Popover>
                 <PopoverTrigger>
@@ -75,8 +76,8 @@ export default function Navbar() {
                     <PopoverBody>
                     <Box
                     display={'flex'}
-                    flexDirection={'row'}
-                    gap={'50px'}
+                    flexDirection={'column'}
+                    gap={'8px'}
                 >
                     <Text>About</Text>
                     <Text>FAQ</Text>
@@ -84,7 +85,7 @@ export default function Navbar() {
                 </Box>
 
 
-                <Stack direction='row' spacing={4} align='center'>
+                <Stack direction='row' spacing={4} align='center' pt={'8px'}>
                     <Button bg={'#FFF239'} border={'1px solid black'}>
                         Sign up
                     </Button>

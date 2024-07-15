@@ -11,7 +11,7 @@ export default function Track() {
             w={'full'}
             h={'100vh'}
             justifyContent={'center'}
-            pt={['0px', '0px', '200px', '200px']}
+            pt={['24px', '24px', '200px', '200px']}
             px={'24px'}
             fontFamily={'Roobert Pro'}
         >

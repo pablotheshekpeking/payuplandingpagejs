@@ -15,7 +15,7 @@ export default function Contact() {
             h={'100vh'}
             px={['24px', '24px', '150px', '150px']}
             display={'flex'}
-            flexDirection={['column', 'column', 'row', 'row']}
+            flexDirection={['column-reverse', 'column-reverse', 'row', 'row']}
             justifyContent={'center'}
             fontFamily={'Roobert Pro'}
             alignItems={'center'}
