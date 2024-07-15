@@ -9,6 +9,7 @@ import Open from "./components/openaccount";
 import FAQ from "./components/faq";
 import "../../public/global.css"
 import Contact from "./components/contact";
+import Track from "./components/track";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       scrollBehavior={'smooth'}
       m={'0px'}
       p={'0px'}
+      fontFamily={'Roobert Pro'}
     >
       <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} >
         <Navbar />
@@ -34,7 +36,9 @@ export default function Home() {
 
       <BigImg />
 
-      {/**<Open />*/}
+      <Track />
+
+      <Open />
 
       <FAQ />
 
