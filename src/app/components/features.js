@@ -6,14 +6,15 @@ export default function Features() {
     return (
         <Box
             w={'full'}
-            h={'50vh'}
+            h={'100vh'}
             display={'grid'}
             gridTemplateColumns="repeat(auto-fit, minmax(200px, 1fr))"
             gap={'24px'}
             px={'24px'}
+            pt={['0px', '0px', '330px', '330px']}
         >
             <Box
-                h={'auto'}
+                h={'300px'}
                 bg={'white'}
                 borderRadius={'12px'}
                 p={'40px'}
@@ -39,7 +40,7 @@ export default function Features() {
             </Box>
 
             <Box
-                h={'auto'}
+                h={'300px'}
                 bg={'white'}
                 borderRadius={'12px'}
                 p={'40px'}
@@ -66,7 +67,7 @@ export default function Features() {
             </Box>
 
             <Box
-                h={'auto'}
+                h={'300px'}
                 bg={'white'}
                 borderRadius={'12px'}
                 p={'40px'}
@@ -94,7 +95,7 @@ export default function Features() {
             </Box>
 
             <Box
-                h={'auto'}
+                h={'300px'}
                 bg={'white'}
                 borderRadius={'12px'}
                 p={'40px'}

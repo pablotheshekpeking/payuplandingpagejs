@@ -14,6 +14,7 @@ export default function Open() {
             justifyContent={'center'}
             fontFamily={'Roobert Pro'}
             alignItems={'center'}
+            pt={['150px', '150px', '200px', '200px']}
         >
             <Box
                 w={['348px', '348px', '458px', '485px']}
@@ -54,7 +55,9 @@ export default function Open() {
                 pt={'30px'}
                 fontFamily={'Roobert Pro'}
             >
-                A world where you can effortlessly transact across continents as easily as you would in your local shop {" "} <span style={{ fontWeight: 700 }}>"your conduit to efficient and secure international transactions"</span> .
+                A world where you can effortlessly transact across continents as easily as you would in your local shop
+                <br />
+                 {" "} <span style={{ fontWeight: 700 }}>"your conduit to efficient and secure international transactions"</span> .
             </Text>
 
             <Button bg={'black'} color={'#FFF239'} mt={'30px'} fontFamily={'Roobert Pro'}>

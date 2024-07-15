@@ -74,11 +74,11 @@ export default function Contact() {
                             flexDirection={'row'}
                             alignItems={'center'}
                         >
-                            <Image src={'/ig.png'} width={56} height={52} />
+                            <Image src={'/ig.png'} width={32} height={32} />
 
-                            <Image src={'/x.png'} width={56} height={52} />
+                            <Image src={'/x.png'} width={32} height={32} />
 
-                            <Image src={'/linkedin.png'} width={56} height={52} />
+                            <Image src={'/linkedin.png'} width={32} height={32} />
 
                         </Box>
                         <Button type="submit" variant='primary' w={'178px'} h={'52px'} mt={'16px'} bg={'black'} color={'white'} borderRadius={'12px'}>

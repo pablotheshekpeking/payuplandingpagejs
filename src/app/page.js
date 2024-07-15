@@ -10,6 +10,7 @@ import FAQ from "./components/faq";
 import "../../public/global.css"
 import Contact from "./components/contact";
 import Track from "./components/track";
+import BigImgMobile from "./components/bigimagemobile";
 
 export default function Home() {
   return (
@@ -33,8 +34,14 @@ export default function Home() {
       <Features />
 
       <Why />
-      
+
+      <Box display={['none', 'none', 'flex', 'flex']}>
       <BigImg />
+      </Box>
+
+      <Box display={['flex', 'flex', 'none', 'none']}>
+      <BigImgMobile />
+      </Box>
 
       <Track />
 

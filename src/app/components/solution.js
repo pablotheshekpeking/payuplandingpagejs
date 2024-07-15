@@ -15,15 +15,15 @@ export default function Solution() {
         px={'24px'}
         >
         <Box
-        w={'full'}
-        h={'100%'}
+            w={'full'}
+            h={'100%'}
             display={'flex'}
             flexDirection={['column', 'column', 'row', 'row']}
             justifyContent={'center'}
-            gap={['50px', '50px', '160px', '160px']}
+            gap={['50px', '50px', '144px', '144px']}
         >
             <Text
-                w={['100%', '100%', '493px', '493px']}
+                w={['100%', '100%', '420px', '420px']}
                 h={['100px', '100px', '231px', '231px']}
                 fontWeight={400}
                 fontSize={['15px', '15px', '20px', '20px']}
@@ -42,7 +42,7 @@ export default function Solution() {
                 h={'423px'}
                 maxW={'100%'}
             >
-                <Image src={'/solution.png'} width={650} height={423} />
+                <Image src={'/solution.png'} width={610} height={403} />
             </Box>
         </Box>
         </Box>
