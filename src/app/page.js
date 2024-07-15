@@ -22,7 +22,7 @@ export default function Home() {
       p={'0px'}
       fontFamily={'Roobert Pro'}
     >
-      <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} >
+      <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} zIndex={999} >
         <Navbar />
       </Center>
 
