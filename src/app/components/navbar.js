@@ -42,11 +42,13 @@ export default function Navbar() {
             </Box>
             
 
-            <Hide below='md'>
+            <Box display={['none', 'none', 'flex', 'flex']} alignItems={'center'}  w={'full'} justifyContent={'space-between'}>
                 <Box
                     display={'flex'}
                     flexDirection={'row'}
                     gap={'50px'}
+                    justifyContent={'center'}
+                    w={'full'}
                 >
                     <Text>About</Text>
                     <Text>FAQ</Text>
@@ -62,10 +64,10 @@ export default function Navbar() {
                         Sign in
                     </Button>
                 </Stack>
-            </Hide>
+            </Box>
 
             {/*** mobile navbar */}
-            <Show below='md'>
+            <Box display={['flex', 'flex', 'none', 'none']}>
             <Popover>
                 <PopoverTrigger>
                     <HamburgerIcon />
@@ -96,7 +98,7 @@ export default function Navbar() {
                     </PopoverBody>
                 </PopoverContent>
             </Popover>
-            </Show>
+            </Box>
 
         </Box>
     );
