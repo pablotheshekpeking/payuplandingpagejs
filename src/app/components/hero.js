@@ -75,7 +75,7 @@ export default function Hero() {
                             position="absolute"
                             top={image.top}
                             left={image.left}
-                            opacity={0.2} // Initial low opacity
+                            opacity={0.01} // Initial low opacity
                             animation={`${fadeIn} 1s forwards ${5 + index * 0.5}s`} // Fade-in animation with staggered delay
                         />
                     ))}
