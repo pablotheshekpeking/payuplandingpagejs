@@ -137,7 +137,7 @@ export default function Footer() {
                         flexDirection={['row', 'row', 'column', 'column']}
                         justifyContent={'center'}
                         alignItems={['center', 'center', 'flex-end', 'flex-end']}
-                        gap={'72px'}
+                        gap={'86px'}
                         px={['24px', '24px', '64px', '64px']}
                     >
                         <Text>Terms & Conditions</Text>
