@@ -20,6 +20,7 @@ export default function Contact() {
             fontFamily={'Roobert Pro'}
             alignItems={'center'}
             gap={['24px', '24px', '80px', '80px']}
+            pb={['150px', '150px', '200px', '200px']}
         >
             <Box
                 w={['full', 'full', '50%', '50%']}

@@ -11,10 +11,11 @@ import "../../public/global.css"
 import Contact from "./components/contact";
 import Track from "./components/track";
 import BigImgMobile from "./components/bigimagemobile";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <Box
+    <><Box
       bg={'#F7EBE8'}
       w={'full'}
       px={['10px', '10px', '', '']}
@@ -52,5 +53,6 @@ export default function Home() {
       <Contact />
 
     </Box>
+    <Footer /></>
   );
 }
