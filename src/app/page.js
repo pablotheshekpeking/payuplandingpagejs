@@ -32,15 +32,17 @@ export default function Home() {
 
       <Solution />
 
+      <section id="about">
       <Features />
+      </section>
 
       <Why />
 
-      <Box display={['none', 'none', 'flex', 'flex']}>
+      <Box display={['none', 'none', 'none', 'flex']}>
       <BigImg />
       </Box>
 
-      <Box display={['flex', 'flex', 'none', 'none']}>
+      <Box display={['flex', 'flex', 'flex', 'none']}>
       <BigImgMobile />
       </Box>
 
@@ -48,9 +50,14 @@ export default function Home() {
 
       <Open />
 
+      <section id="faq">
       <FAQ />
+      </section>
 
-      <Contact />
+      <section id="contact">
+        <Contact />
+      </section>
+      
 
     </Box>
     <Footer /></>

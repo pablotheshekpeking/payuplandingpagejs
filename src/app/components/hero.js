@@ -11,12 +11,13 @@ const fadeIn = keyframes`
 export default function Hero() {
 
     const images = [
-        { src: '/h1.png', top: '45%', left: '24%' },
-        { src: '/h2.png', top: '65%', left: '30%' },
-        { src: '/h3.png', top: '25%', left: '30%' },
-        { src: '/h4.png', top: '65%', left: '62%' },
-        { src: '/h5.png', top: '45%', left: '68%' },
-        { src: '/h6.png', top: '25%', left: '62%' },
+        { src: '/h2.png', top: '45%', left: '24%' }, // peak of left side
+        { src: '/h3.png', top: '65%', left: '30%' }, //  bottom of left side
+        { src: '/h1.png', top: '25%', left: '30%' }, //  up of left side
+
+        { src: '/h5.png', top: '65%', left: '62%' }, //  bottom of right side
+        { src: '/h6.png', top: '45%', left: '68%' }, //  peak of right side
+        { src: '/h4.png', top: '25%', left: '62%' }, //  up of righ side
     ];
 
     return (
@@ -70,8 +71,8 @@ export default function Hero() {
                             src={image.src}
                             alt={`Image ${index + 1}`}
                             borderRadius="50%"
-                            width={['30px', '30px', '100px', '100px']}
-                            height={['30px', '30px', '100px', '100px']}
+                            width={['30px', '30px', '70px', '100px']}
+                            height={['30px', '30px', '70px', '100px']}
                             position="absolute"
                             top={image.top}
                             left={image.left}

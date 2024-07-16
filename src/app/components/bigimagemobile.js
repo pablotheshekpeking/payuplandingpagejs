@@ -7,7 +7,7 @@ export default function BigImgMobile() {
     return (
         <Box
             w={'full'}
-            h={['12vh', '12vh', '100vh', '100vh']}
+            h={['12vh', '12vh', '50vh', '100vh']}
             display={'flex'}
             justifyContent={'center'}
             alignItems={'center'}

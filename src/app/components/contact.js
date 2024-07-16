@@ -15,15 +15,16 @@ export default function Contact() {
             h={'100vh'}
             px={['24px', '24px', '150px', '150px']}
             display={'flex'}
-            flexDirection={['column-reverse', 'column-reverse', 'row', 'row']}
+            flexDirection={['column-reverse', 'column-reverse', 'column-reverse', 'row']}
             justifyContent={'center'}
             fontFamily={'Roobert Pro'}
             alignItems={'center'}
             gap={['24px', '24px', '80px', '80px']}
-            pb={['150px', '150px', '200px', '200px']}
+            pb={['450px', '150px', '500px', '200px']}
+            pt={['300px', '150px', '500px', '200px']}
         >
             <Box
-                w={['full', 'full', '50%', '50%']}
+                w={['full', 'full', 'full', '50%']}
                 h={'560px'}
             >
                 <Text fontWeight={600} fontSize={['40px', '40px', '64px', '64px']}>Leave a message</Text>
@@ -39,7 +40,7 @@ export default function Contact() {
                     <Box
                         display={'flex'}
                         border={'1px solid #000000'}
-                        width={['80%', '80%', '354px', '354px']}
+                        width={['80%', '80%', '80%', '354px']}
                         h={'56px'}
                         p={'14px 16px'}
                         borderRadius={'12px'}
@@ -92,7 +93,7 @@ export default function Contact() {
             </Box>
 
             <Box
-                w={['full', 'full', '50%', '50%']}
+                w={['full', 'full', 'full', '50%']}
                 h={'auto'}
             >
                 <Image src={'/contact.png'} width={824} height={560} />

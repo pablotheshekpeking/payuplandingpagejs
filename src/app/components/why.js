@@ -23,7 +23,7 @@ export default function Why() {
                 alignItems={'center'}
             >
 
-                <Image src={'/whyimg.png'} width={1279.68} height={[140, 140, 434.27, 434.27]} />
+                <Image src={'/whyimg.png'} width={1279.68} height={[140, 140, 160, 434.27]} />
 
 
             </Box>

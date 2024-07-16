@@ -30,7 +30,7 @@ export default function Features() {
 
                 <Text
                     fontSize={'18px'}
-                    lineHeight={'40px'}
+                    
                     fontWeight={'400'}
                     fontFamily={'Roobert Pro'}
                 >
@@ -57,7 +57,7 @@ export default function Features() {
 
                 <Text
                     fontSize={'18px'}
-                    lineHeight={'40px'}
+                    
                     fontWeight={'400'}
                     fontFamily={'Roobert Pro'}
                 >
@@ -85,7 +85,7 @@ export default function Features() {
 
                 <Text
                     fontSize={'18px'}
-                    lineHeight={'40px'}
+                    
                     fontWeight={'400'}
                     fontFamily={'Roobert Pro'}
                 >
@@ -113,7 +113,7 @@ export default function Features() {
 
                 <Text
                     fontSize={'18px'}
-                    lineHeight={'40px'}
+                    
                     fontWeight={'400'}
                     fontFamily={'Roobert Pro'}
                 >

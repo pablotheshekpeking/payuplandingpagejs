@@ -21,7 +21,8 @@ export default function Track() {
                 display={'flex'}
                 flexDirection={['column-reverse', 'column-reverse', 'row-reverse', 'row-reverse']}
                 justifyContent={'center'}
-                gap={['50px', '50px', '160px', '160px']}
+                gap={['50px', '50px', '50px', '160px']}
+                alignItems={['center', 'center', 'center', 'flex-start']}
             >
                 <Text
                     w={['100%', '100%', '493px', '493px']}
@@ -40,7 +41,7 @@ export default function Track() {
 
                 <Box
                     w={'620px'}
-                    h={'521px'}
+                    h={['521px', '521px', '320px', '521px']}
                     maxW={'100%'}
                 >
                     <svg width="100%" height="100%" viewBox="0 0 629 521" fill="none" xmlns="http://www.w3.org/2000/svg">

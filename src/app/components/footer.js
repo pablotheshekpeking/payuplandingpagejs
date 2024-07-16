@@ -1,9 +1,32 @@
 'use client'
-
-import { Box, Divider, Icon, Text } from "@chakra-ui/react";
+import React from "react";
+import { Box, Divider, Icon, Text, ButtonGroup, Button } from "@chakra-ui/react";
 import Link from "next/link";
+import {
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    PopoverHeader,
+    PopoverBody,
+    PopoverFooter,
+    PopoverArrow,
+    PopoverCloseButton,
+    PopoverAnchor,
+  } from '@chakra-ui/react'
 
 export default function Footer() {
+
+    const handleScroll = (e, sectionId) => {
+        e.preventDefault();
+        const targetElement = document.querySelector(sectionId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    const initialFocusRef = React.useRef()
     return (
         <Box
             w={'full'}
@@ -28,7 +51,7 @@ export default function Footer() {
                     display={'flex'}
                     flexDirection={'row'}
                     justifyContent={'space-between'}
-                    w={['100%', '100%', '50%', '50%']}
+                    w={['100%', '100%', '100%', '50%']}
                     alignItems={'center'}
                 >
                     <Icon w={'10px'} h={'10px'} viewBox='0 0 200 200' color='black.500'>
@@ -70,7 +93,7 @@ export default function Footer() {
                 </Box>
 
                 <Box
-                    display={['none', 'none', 'flex', 'flex']}
+                    display={['none', 'none', 'none', 'flex']}
                     flexDirection={'row'}
                     justifyContent={'space-between'}
                     w={['100%', '100%', '50%', '50%']}
@@ -126,27 +149,27 @@ export default function Footer() {
             >
                 <Box
                     display={'flex'}
-                    flexDirection={['column', 'column', 'row', 'row']}
+                    flexDirection={['column', 'column', 'column', 'row']}
                     width={'full'}
                     h={'50%'}
                 >
                     <Box
-                        w={['100%', '100%', '50%', '50%']}
+                        w={['100%', '100%', '100%', '50%']}
                         h={'full'}
                         display={'flex'}
-                        flexDirection={['row', 'row', 'column', 'column']}
+                        flexDirection={['row', 'row', 'row', 'column']}
                         justifyContent={'center'}
-                        alignItems={['center', 'center', 'flex-end', 'flex-end']}
-                        gap={'86px'}
+                        alignItems={['center', 'center', 'center', 'flex-end']}
+                        gap={'64px'}
                         px={['24px', '24px', '64px', '64px']}
                     >
                         <Text>Terms & Conditions</Text>
 
                         <Text>© 2024 PayUp. All rights reserved.</Text>
                     </Box>
-                    <Divider h={['1px', '1px', '100%', '100%']} orientation='vertical' border={'1px solid black'} />
+                    <Divider h={['1px', '1px', '1px', '100%']} orientation='vertical' border={'1px solid black'} />
                     <Box
-                        w={['100%', '100%', '50%', '50%']}
+                        w={['100%', '100%', '100%', '50%']}
                         h={'full'}
                         display={'flex'}
                         flexDirection={'row'}
@@ -160,9 +183,9 @@ export default function Footer() {
                             flexDirection={'column'}
                             gap={'16px'}
                         >
-                            <Text>About</Text>
-                            <Text>FAQ</Text>
-                            <Text>Contact</Text>
+                            <Link href={'#about'} passHref onClick={(e) => handleScroll(e, '#about')}><Text>About</Text></Link>
+                            <Link href={'#faq'} passHref onClick={(e) => handleScroll(e, '#faq')}><Text>FAQ</Text></Link>
+                            <Link href={'#contact'} passHref onClick={(e) => handleScroll(e, '#contact')}><Text>Contact</Text></Link>
                         </Box>
 
                         <Box
@@ -221,8 +244,8 @@ export default function Footer() {
                         flexDirection={'row'}
                         justifyContent={'center'}
                         alignItems={'center'}
-                        gap={['24px', '24px', '140px', '140px']}
-                        px={['24px', '24px', '64px', '64px']}
+                        gap={['24px', '24px', '24px', '140px']}
+                        px={['24px', '24px', '24px', '64px']}
                     >
                         <Box
                             display={'flex'}
@@ -230,7 +253,41 @@ export default function Footer() {
                             gap={'16px'}
                             w={'50%'}
                         >
-                            <Text>Legal</Text>
+                            <Popover
+                                initialFocusRef={initialFocusRef}
+                                placement='bottom'
+                                closeOnBlur={false}
+                            >
+                                <PopoverTrigger>
+                                    <Text _hover={{ cursor: 'pointer' }}>Legal</Text>
+                                </PopoverTrigger>
+                                <PopoverContent color='white' bg='blue.800' borderColor='blue.800'>
+                                    <PopoverHeader pt={4} fontWeight='bold' border='0'>
+                                        Manage Your Channels
+                                    </PopoverHeader>
+                                    <PopoverArrow bg='blue.800' />
+                                    <PopoverCloseButton />
+                                    <PopoverBody>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore.
+                                    </PopoverBody>
+                                    <PopoverFooter
+                                        border='0'
+                                        display='flex'
+                                        alignItems='center'
+                                        justifyContent='space-between'
+                                        pb={4}
+                                    >
+                                        <Box fontSize='sm'>Step 2 of 4</Box>
+                                        <ButtonGroup size='sm'>
+                                            <Button colorScheme='green'>Setup Email</Button>
+                                            <Button colorScheme='blue' ref={initialFocusRef}>
+                                                Next
+                                            </Button>
+                                        </ButtonGroup>
+                                    </PopoverFooter>
+                                </PopoverContent>
+                            </Popover>
                             <Text>Cookie policy</Text>
                             <Text>Privacy policy</Text>
                         </Box>
@@ -246,7 +303,7 @@ export default function Footer() {
                             <Text>{" "}</Text>
                         </Box>
 
-                        
+
 
 
                     </Box>
