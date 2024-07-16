@@ -183,6 +183,10 @@ export default function Footer() {
                             <Link href={''}><Text textDecoration={'underline'}>See on Map</Text></Link>
                             <Text>{" "}</Text>
                             <Text>{" "}</Text>
+                            <Text>{" "}</Text>
+                            <Text>{" "}</Text>
+                            <Text display={['none', 'none', 'block', 'block']}>{" "}</Text>
+                            <Text display={['none', 'none', 'block', 'block']}>{" "}</Text>
                         </Box>
 
 
@@ -196,7 +200,7 @@ export default function Footer() {
                     h={'50%'}
                 >
                     <Box
-                        w={'698px'}
+                        w={['100%', '100%', '50%', '50%']}
                         h={'full'}
                         display={'flex'}
                         flexDirection={['row', 'row', 'column', 'column']}
@@ -224,13 +228,25 @@ export default function Footer() {
                             display={'flex'}
                             flexDirection={'column'}
                             gap={'16px'}
+                            w={'50%'}
                         >
                             <Text>Legal</Text>
                             <Text>Cookie policy</Text>
                             <Text>Privacy policy</Text>
                         </Box>
 
-                        <Text w={'248px'} maxW={'100%'}>PU Office 17, Ikoyi rd , Off Rf gardens Lagos Island.</Text>
+                        <Box
+                            display={'flex'}
+                            flexDirection={'column'}
+                            gap={'16px'}
+                            w={'50%'}
+                        >
+                            <Text>Address</Text>
+                            <Text w={'248px'} maxW={'100%'}>PU Office 17, Ikoyi rd , Off Rf gardens Lagos Island.</Text>
+                            <Text>{" "}</Text>
+                        </Box>
+
+                        
 
 
                     </Box>
