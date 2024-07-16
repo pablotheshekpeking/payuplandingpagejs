@@ -42,7 +42,7 @@ export default function Navbar() {
             fontFamily={'Roobert Pro'}
         >
             {/*** payuo logo */}
-            <Link href={''}>
+            <Link href={'/#top'} passHref onClick={(e) => handleScroll(e, '#top')}>
                 <Box
                     w={['100px', '100px', '176px', '176px']}
                     h={'auto'}

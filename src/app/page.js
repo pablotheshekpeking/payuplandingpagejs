@@ -16,59 +16,61 @@ import Footer from "./components/footer";
 export default function Home() {
   return (
     <Box
-    bg={'#F7EBE8'}
-    display={'flex'}
-    flexDirection={'column'}
-    gap={'80px'}
-    >
-      <Box
       bg={'#F7EBE8'}
-      w={'full'}
-      px={['10px', '10px', '', '']}
-      scrollBehavior={'smooth'}
-      m={'0px'}
-      p={'0px'}
-      fontFamily={'Roobert Pro'}
       display={'flex'}
       flexDirection={'column'}
       gap={'80px'}
     >
-      <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} zIndex={999} >
-        <Navbar />
-      </Center>
+      <Box
+        bg={'#F7EBE8'}
+        w={'full'}
+        px={['10px', '10px', '', '']}
+        scrollBehavior={'smooth'}
+        m={'0px'}
+        p={'0px'}
+        fontFamily={'Roobert Pro'}
+        display={'flex'}
+        flexDirection={'column'}
+        gap={'80px'}
+      >
+        <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} zIndex={999} >
+          <Navbar />
+        </Center>
 
-      <Hero />
+        <section id="top">
+          <Hero />
+        </section>
 
-      <Solution />
+        <Solution />
 
-      <section id="about">
-      <Features />
-      </section>
+        <section id="about">
+          <Features />
+        </section>
 
-      <Why />
+        <Why />
 
-      <Box display={['none', 'none', 'none', 'flex']}>
-      <BigImg />
+        <Box display={['none', 'none', 'none', 'flex']}>
+          <BigImg />
+        </Box>
+
+        <Box display={['flex', 'flex', 'flex', 'none']}>
+          <BigImgMobile />
+        </Box>
+
+        <Track />
+
+        <Open />
+
+        <section id="faq" style={{ paddingBottom: '80px' }}>
+          <FAQ />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+
+
       </Box>
-
-      <Box display={['flex', 'flex', 'flex', 'none']}>
-      <BigImgMobile />
-      </Box>
-
-      <Track />
-
-      <Open />
-
-      <section id="faq" style={{ paddingBottom: '80px' }}>
-      <FAQ />
-      </section>
-
-      <section id="contact">
-        <Contact />
-      </section>
-      
-
-    </Box>
-    <Footer /></Box>
+      <Footer /></Box>
   );
 }

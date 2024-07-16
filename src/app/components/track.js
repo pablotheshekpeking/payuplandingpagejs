@@ -21,7 +21,7 @@ export default function Track() {
                 flexDirection={['column-reverse', 'column-reverse', 'row-reverse', 'row-reverse']}
                 justifyContent={'center'}
                 gap={['50px', '50px', '50px', '160px']}
-                alignItems={['center', 'center', 'center', 'flex-start']}
+                alignItems={'center'}
             >
                 <Text
                     w={['100%', '100%', '493px', '493px']}
