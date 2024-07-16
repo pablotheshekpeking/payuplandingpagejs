@@ -15,7 +15,13 @@ import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <><Box
+    <Box
+    bg={'#F7EBE8'}
+    display={'flex'}
+    flexDirection={'column'}
+    gap={'80px'}
+    >
+      <Box
       bg={'#F7EBE8'}
       w={'full'}
       px={['10px', '10px', '', '']}
@@ -23,6 +29,9 @@ export default function Home() {
       m={'0px'}
       p={'0px'}
       fontFamily={'Roobert Pro'}
+      display={'flex'}
+      flexDirection={'column'}
+      gap={'80px'}
     >
       <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} zIndex={999} >
         <Navbar />
@@ -50,7 +59,7 @@ export default function Home() {
 
       <Open />
 
-      <section id="faq">
+      <section id="faq" style={{ paddingBottom: '80px' }}>
       <FAQ />
       </section>
 
@@ -60,6 +69,6 @@ export default function Home() {
       
 
     </Box>
-    <Footer /></>
+    <Footer /></Box>
   );
 }

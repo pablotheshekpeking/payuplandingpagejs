@@ -11,7 +11,6 @@ export default function Solution() {
         w={'full'}
         h={'100vh'}
         justifyContent={'center'}
-        pt={['0px', '0px', '200px', '200px']}
         px={'24px'}
         >
         <Box
@@ -21,6 +20,7 @@ export default function Solution() {
             flexDirection={['column', 'column', 'row', 'row']}
             justifyContent={'center'}
             gap={['50px', '50px', '144px', '144px']}
+            alignItems={'center'}
         >
             <Text
                 w={['100%', '100%', '420px', '420px']}

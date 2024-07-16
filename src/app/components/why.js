@@ -12,7 +12,7 @@ export default function Why() {
             justifyContent={'center'}
             alignItems={'center'}
             px={['24px', '24px', '100px', '100px']}
-            mt={['340px', '340px', '0px', '0px']}
+            mt={['540px', '540px', '0px', '0px']}
         >
             <Box
                 w={'full'}
@@ -23,7 +23,7 @@ export default function Why() {
                 alignItems={'center'}
             >
 
-                <Image src={'/whyimg.png'} width={1279.68} height={[140, 140, 160, 434.27]} />
+                <Image src={'/whyimg.png'} width={1279.68} height={[140, 140, 160, 408]} />
 
 
             </Box>

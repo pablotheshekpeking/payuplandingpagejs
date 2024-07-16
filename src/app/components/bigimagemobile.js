@@ -7,7 +7,7 @@ export default function BigImgMobile() {
     return (
         <Box
             w={'full'}
-            h={['12vh', '12vh', '50vh', '100vh']}
+            h={'100vh'}
             display={'flex'}
             justifyContent={'center'}
             alignItems={'center'}
@@ -17,7 +17,6 @@ export default function BigImgMobile() {
                 w={'full'}
                 h={['1000px', '1000px', 'auto', 'auto']}
                 maxW={'full'}
-                pb={['50px', '50px', 'none', 'none']}
             >
                 <svg width="100%" height="100%" viewBox="0 0 1092 1096" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_1591_2937)">

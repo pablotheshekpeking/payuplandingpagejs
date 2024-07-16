@@ -7,7 +7,7 @@ export default function BigImg() {
     return (
         <Box
             w={'full'}
-            h={['4vh', '4vh', '100vh', '100vh']}
+            h={'100vh'}
             display={'flex'}
             justifyContent={'center'}
             alignItems={'center'}

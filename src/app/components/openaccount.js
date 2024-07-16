@@ -14,7 +14,6 @@ export default function Open() {
             justifyContent={'center'}
             fontFamily={'Roobert Pro'}
             alignItems={'center'}
-            pt={['150px', '150px', '200px', '200px']}
         >
             <Box
                 w={['348px', '348px', '458px', '485px']}
@@ -54,6 +53,7 @@ export default function Open() {
                 textAlign={'center'}
                 pt={'30px'}
                 fontFamily={'Roobert Pro'}
+                fontSize={['12px', '12px', '18px', '18px']}
             >
                 A world where you can effortlessly transact across continents as easily as you would in your local shop
                 <br />

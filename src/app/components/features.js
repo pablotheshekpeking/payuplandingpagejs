@@ -11,7 +11,7 @@ export default function Features() {
             gridTemplateColumns="repeat(auto-fit, minmax(200px, 1fr))"
             gap={'24px'}
             px={'24px'}
-            pt={['0px', '0px', '330px', '330px']}
+            alignItems={'center'}
         >
             <Box
                 h={'300px'}
