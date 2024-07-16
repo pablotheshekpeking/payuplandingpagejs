@@ -38,7 +38,7 @@ export default function Solution() {
 
 
             <Box
-                w={'650px'}
+                w={'auto'}
                 h={'423px'}
                 maxW={'100%'}
             >

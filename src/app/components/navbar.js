@@ -16,7 +16,7 @@ export default function Navbar() {
         <Box
             w={'full'}
             h={'auto'}
-            bg={'rgba(255, 255, 255, 0.2)'}
+            bg={'rgba(255, 255, 255, 0.6)'}
             boxShadow={'0 4px 30px rgba(0, 0, 0, 0.1)'}
             backdropFilter={'blur(5px)'}
             borderRadius={'20px'}

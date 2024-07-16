@@ -117,7 +117,7 @@ export default function Features() {
                     fontWeight={'400'}
                     fontFamily={'Roobert Pro'}
                 >
-                    Transfer funds or pay a bill with Pay Up. Gift and make loved ones smile.
+                    Transfer funds or pay a joint bill with Pay Up. Gift and make loved ones smile.
                 </Text>
 
             </Box>

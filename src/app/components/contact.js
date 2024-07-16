@@ -66,7 +66,7 @@ export default function Contact() {
                         display={'flex'}
                         alignItems={'center'}
                         justifyContent={'space-between'}
-                        flexDirection={['column', 'column', 'row',  'row']}
+                        flexDirection={'row'}
                     >
                         <Box
                             className="socials"
