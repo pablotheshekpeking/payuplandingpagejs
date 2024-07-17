@@ -1,24 +1,9 @@
 'use client'
-import { Box, Text, keyframes } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
-// Keyframe animation for fading in images
-const fadeIn = keyframes`
-  0% { opacity: 0.01; }
-  100% { opacity: 1; }
-`;
 
 
 export default function Hero() {
-
-    const images = [
-        { src: '/h2.png', top: '45%', left: '24%' }, // peak of left side
-        { src: '/h3.png', top: '65%', left: '30%' }, //  bottom of left side
-        { src: '/h1.png', top: '25%', left: '30%' }, //  up of left side
-
-        { src: '/h5.png', top: '65%', left: '62%' }, //  bottom of right side
-        { src: '/h6.png', top: '45%', left: '68%' }, //  peak of right side
-        { src: '/h4.png', top: '25%', left: '62%' }, //  up of righ side
-    ];
 
     return (
         <Box
@@ -65,23 +50,60 @@ export default function Hero() {
                             </clipPath>
                         </defs>
                     </svg>
-                    {images.map((image, index) => (
-                        <Image
-                            key={index}
-                            src={image.src}
-                            alt={`Image ${index + 1}`}
-                            borderRadius="50%"
-                            width={['30px', '30px', '70px', '100px']}
-                            height={['30px', '30px', '70px', '100px']}
-                            position="absolute"
-                            top={image.top}
-                            left={image.left}
-                            opacity={0} // Initial low opacity
-                            animation={`${fadeIn} 1s forwards ${2 + index * 0.2}s`} // Fade-in animation with staggered delay
-                        />
-                    ))}
-
                 </Box>
+
+                {/** coin images */}
+                <Box>
+                    {/** ngn coin */}
+                    <Image
+                        src="/ngncoin.png"
+                        alt="NGN Coin"
+                        position={'absolute'}
+                        width={[100, 100, 169.05, 169.05]}
+                        height={[100, 100, 195.2, 195.2]}
+                        zIndex={800}
+                        top={['220px', '220px', '460px', '320px']}
+                        left={['50px', '50px', '180px', '436px']}
+                    />
+
+                    {/** usd coin */}
+                    <Image
+                        src="/usdcoin.png"
+                        alt="USD Coin"
+                        position={'absolute'}
+                        width={[50, 50, 100, 112]}
+                        height={[50, 50, 100, 115.58]}
+                        zIndex={800}
+                        top={['300px', '300px', '620px', '500px']}
+                        left={['108px', '108px', '240px', '500px']}
+                    />
+
+                    {/** yen coin */}
+                    <Image
+                        src="/yencoin.png"
+                        alt="YEN Coin"
+                        position={'absolute'}
+                        width={[90, 100, 162.07, 162.07]}
+                        height={[90, 100, 161.33, 161.33]}
+                        zIndex={800}
+                        top={['220px', '220px', '460px', '320px']}
+                        right={['60px', '50px', '180px', '436px']}
+                    />
+
+                    {/** euro coin */}
+                    <Image
+                        src="/eurocoin.png"
+                        alt="euro Coin"
+                        position={'absolute'}
+                        width={[50, 50, 100, 112]}
+                        height={[50, 50, 100, 115.58]}
+                        zIndex={800}
+                        top={['280px', '280px', '580px', '460px']}
+                        right={['108px', '108px', '240px', '500px']}
+                    />
+                </Box>
+
+
                 <Text py={'30px'}>Get started on Payup to foot your bills in any currency</Text>
                 <Box
                     display={'flex'}
