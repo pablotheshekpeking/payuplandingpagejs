@@ -62,7 +62,7 @@ export default function Hero() {
                         width={[100, 100, 169.05, 169.05]}
                         height={[100, 100, 195.2, 195.2]}
                         zIndex={800}
-                        top={['220px', '220px', '460px', '320px']}
+                        top={['38vh', '420px', '460px', '320px']}
                         left={['50px', '50px', '180px', '436px']}
                     />
 
@@ -74,7 +74,7 @@ export default function Hero() {
                         width={[50, 50, 100, 112]}
                         height={[50, 50, 100, 115.58]}
                         zIndex={800}
-                        top={['300px', '300px', '620px', '500px']}
+                        top={['46vh', '300px', '620px', '500px']}
                         left={['108px', '108px', '240px', '500px']}
                     />
 
@@ -86,7 +86,7 @@ export default function Hero() {
                         width={[90, 100, 162.07, 162.07]}
                         height={[90, 100, 161.33, 161.33]}
                         zIndex={800}
-                        top={['220px', '220px', '460px', '320px']}
+                        top={['36vh', '220px', '460px', '320px']}
                         right={['60px', '50px', '180px', '436px']}
                     />
 
@@ -98,7 +98,7 @@ export default function Hero() {
                         width={[50, 50, 100, 112]}
                         height={[50, 50, 100, 115.58]}
                         zIndex={800}
-                        top={['280px', '280px', '580px', '460px']}
+                        top={['44vh', '44vh', '50vh', '460px']}
                         right={['108px', '108px', '240px', '500px']}
                     />
                 </Box>
