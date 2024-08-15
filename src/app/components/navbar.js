@@ -74,9 +74,11 @@ export default function Navbar() {
 
 
                 <Stack direction='row' spacing={4} align='center'>
+                    <Link href={'../auth/signup'}>
                     <Button bg={'#FFF239'} border={'1px solid black'}>
                         Sign up
                     </Button>
+                    </Link>
                     <Button color={'#FFF239'} bg={'black'}>
                         Sign in
                     </Button>
