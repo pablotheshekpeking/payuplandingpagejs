@@ -11,7 +11,8 @@ import {
   Select,
   Checkbox,
   useToast,
-  Spinner
+  Spinner,
+  Progress
 } from '@chakra-ui/react';
 import { ArrowBackIcon, WarningTwoIcon } from "@chakra-ui/icons";
 import CustomInput from "@/app/components/custominput";
@@ -31,6 +32,9 @@ export default function SignUp() {
   const handleNextStep = () => {
     setStep((prevStep) => prevStep + 1);
   };
+
+  const steps = 2; // Total number of steps
+  const currentStep = step; // This should be the current step from your state
 
   const handleBack = () => {
     setStep((prevStep) => (prevStep > 1 ? prevStep - 1 : 1));
@@ -161,7 +165,25 @@ export default function SignUp() {
             pb={'80px'}
             alignItems={'center'}
           >
-            <ArrowBackIcon boxSize={[10, 10, 10, 10]} onClick={handleBack} cursor={'pointer'} />
+            <Box display={'flex'} gap={'20px'} w={'50%'} alignItems={'center'}>
+              <ArrowBackIcon
+                boxSize={[10, 10, 10, 10]}
+                border={"2px solid black"}
+                borderRadius={'12px'}
+                p={'12px'}
+                onClick={handleBack}
+                cursor={'pointer'}
+              />
+              <Box w={'100%'}>
+                <Text fontWeight={500} fontSize={'32px'}>{currentStep}/{steps}</Text>
+                <Progress
+                  value={(currentStep / steps) * 100}
+                  colorScheme='green'
+                  size='sm'
+                  w={'300px'}
+                />
+              </Box>
+            </Box>
             <Box display={'flex'} justifyContent={'right'} h={'80px'}>
               <Box w={'400px'} px={'24px'} py={'12px'} bg={'black'} display={'flex'} alignItems={'center'} borderRadius={'20px'}>
                 <Text color={'white'} w={'45%'}>Have an account?</Text>
