@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
 import { Box, Button, Checkbox, Spinner, Text, useToast } from '@chakra-ui/react';
 import CustomInput from "@/app/components/custominput";
+import CustomPinInput from "@/app/components/pininput";
 
 export default function Login() {
   const [loading, setLoading] = useState(false);
@@ -155,13 +156,12 @@ export default function Login() {
                 </Checkbox>
               </>
             ) : (
-              <CustomInput
-                placeholder="Enter OTP"
+              <CustomPinInput
                 type="text"
                 name="otp"
                 id="otp"
                 value={otp}
-                onChange={(e) => setOtp(e.target.value)}
+                onChange={(value) => setOtp(value)}
               />
             )}
 

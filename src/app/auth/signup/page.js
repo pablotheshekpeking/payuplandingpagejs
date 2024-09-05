@@ -267,7 +267,7 @@ export default function SignUp() {
                 placeholder="First Name"
                 name="firstName"
                 id="firstName"
-                value={lastName}
+                value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
 
