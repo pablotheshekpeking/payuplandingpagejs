@@ -19,7 +19,8 @@ export default function Home() {
       bg={'#F7EBE8'}
       display={'flex'}
       flexDirection={'column'}
-      gap={'80px'}
+      maxW={'1728px'}
+      m={'0 auto'}
     >
       <Box
         bg={'#F7EBE8'}
@@ -31,7 +32,6 @@ export default function Home() {
         fontFamily={'Roobert Pro'}
         display={'flex'}
         flexDirection={'column'}
-        gap={'80px'}
       >
         <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} zIndex={999} >
           <Navbar />

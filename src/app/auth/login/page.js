@@ -98,6 +98,8 @@ export default function Login() {
       flexDirection={'row'}
       justifyContent={'center'}
       py={'40px'}
+      maxW={'1728px'}
+      m={'0 auto'}
     >
       <Box
         w={'full'}

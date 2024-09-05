@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from 'next/link';
 import { Text, Image, Center } from "@chakra-ui/react";
 import {
@@ -123,28 +123,24 @@ export default function SignUp() {
     }
   };
 
-  if (isSignupComplete) {
-    return (
-      <Box textAlign="center" py={10} px={6}>
-        <Text fontSize="xl" mb={4}>
-          Signup successful! You can now log in.
-        </Text>
-        <Link href="./login" passHref>
-          <Button colorScheme="blue">Go to Login</Button>
-        </Link>
-      </Box>
-    );
-  }
+  // Redirect to login page when signup is complete
+  useEffect(() => {
+    if (isSignupComplete) {
+      window.location.href = './login';
+    }
+  }, [isSignupComplete]);
 
   return (
     <Box
       w={'full'}
-      h={'auto'}
+      h={'124vh'}
       bg={'#F7EBE8'}
       display={'flex'}
       flexDirection={'row'}
       justifyContent={'center'}
       py={'40px'}
+      maxW={'1728px'}
+      m={'0 auto'}
     >
       <Box
         w={'full'}

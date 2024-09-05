@@ -2,6 +2,7 @@
 
 import { Box, Text, Button } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Open() {
     return (
@@ -60,9 +61,11 @@ export default function Open() {
                  {" "} <span style={{ fontWeight: 700 }}>"your conduit to efficient and secure international transactions"</span> .
             </Text>
 
+            <Link href={'../auth/signup'}>
             <Button bg={'black'} color={'#FFF239'} mt={'30px'} fontFamily={'Roobert Pro'}>
                 Open a Payup account
             </Button>
+            </Link>
         </Box>
     );
 }
