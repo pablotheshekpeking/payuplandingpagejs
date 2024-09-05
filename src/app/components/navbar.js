@@ -79,9 +79,11 @@ export default function Navbar() {
                             Sign up
                         </Button>
                     </Link>
+                    <Link href={'../auth/login'}>
                     <Button color={'#FFF239'} bg={'black'}>
                         Sign in
                     </Button>
+                    </Link>
                 </Stack>
             </Box>
 
@@ -112,9 +114,11 @@ export default function Navbar() {
                                         Sign up
                                     </Button>
                                 </Link>
-                                <Button color={'#FFF239'} bg={'black'}>
-                                    Sign in
-                                </Button>
+                                <Link href={'../auth/login'}>
+                                    <Button color={'#FFF239'} bg={'black'}>
+                                        Sign in
+                                    </Button>
+                                </Link>
                             </Stack>
                         </PopoverBody>
                     </PopoverContent>
