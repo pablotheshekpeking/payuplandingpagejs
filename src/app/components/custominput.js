@@ -11,6 +11,7 @@ const CustomInput = ({ type, name, id, value, onChange, placeholder }) => {
         onChange={onChange}
         placeholder={placeholder}
         focusBorderColor="brand.400"
+        bg={'white'}
         shadow="sm"
         size="sm"
         w="full"

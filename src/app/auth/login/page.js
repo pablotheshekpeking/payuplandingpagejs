@@ -121,7 +121,7 @@ export default function Login() {
             gap={'12px'}
             bg={'#FFF239'}
             border={'2px solid #111317'}
-            alignItems={'center'}
+            alignItems={'center'} borderRight={'8px solid #111317'} borderBottom={'8px solid #111317'}
           >
             <Text fontWeight={600} fontSize={'24px'} pb={'16px'}>
               {step === 1 ? 'Login' : 'Enter OTP'}
@@ -179,6 +179,9 @@ export default function Login() {
             </Button>
           </Box>
         </form>
+        <Box w={'100%'} pt={'60px'}>
+          <Text textAlign={'right'}>© 2024 Payup. All rights reserved.</Text>
+        </Box>
       </Box>
     </Box>
   );

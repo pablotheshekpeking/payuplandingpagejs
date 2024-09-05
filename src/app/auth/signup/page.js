@@ -146,7 +146,7 @@ export default function SignUp() {
         w={'full'}
         display={'flex'}
         flexDirection={'column'}
-        h={'100vh'}
+        h={'auto'}
         justifyContent={'center'}
         px={['24px', '24px', '24px', '128px']}
         position="relative"
@@ -162,11 +162,11 @@ export default function SignUp() {
             alignItems={'center'}
           >
             <ArrowBackIcon boxSize={[10, 10, 10, 10]} onClick={handleBack} cursor={'pointer'} />
-            <Box display={'flex'} justifyContent={'right'} h={'50px'}>
-              <Box w={'400px'} px={'24px'} py={'12px'} bg={'#16160E6B'} display={'flex'} alignItems={'center'} borderRadius={'20px'}>
+            <Box display={'flex'} justifyContent={'right'} h={'80px'}>
+              <Box w={'400px'} px={'24px'} py={'12px'} bg={'black'} display={'flex'} alignItems={'center'} borderRadius={'20px'}>
                 <Text color={'white'} w={'45%'}>Have an account?</Text>
-                <Link href={'./login'} style={{ padding: 20, width: '45%' }}>
-                  <Box bg={'white'} w={'full'} borderRadius={'14px'} cursor={'pointer'}>
+                <Link href={'./login'} style={{ padding: 20, width: '45%', height: '80px' }}>
+                  <Box bg={'white'} h={'full'} w={'full'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'14px'} cursor={'pointer'}>
                     <Text textAlign={'center'} fontWeight={700}>Log in</Text>
                   </Box>
                 </Link>
@@ -253,7 +253,7 @@ export default function SignUp() {
               justifyContent={'center'}
               p={'20px'}
               h={'auto'}
-              borderRadius={'30px'} gap={'12px'} bg={'#FFF239'} border={'2px solid #111317'} alignItems={'center'}
+              borderRadius={'30px'} gap={'12px'} bg={'#FFF239'} border={'2px solid #111317'} alignItems={'center'} borderRight={'8px solid #111317'} borderBottom={'8px solid #111317'}
             >
               <svg width="48" height="42" viewBox="0 0 48 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.7226 34.0434C10.1013 35.6123 7.49981 36.5924 5.35335 37.2003L5.44153 36.9731L19.1654 27.9646C19.108 28.0433 19.0407 28.1339 18.9641 28.2352C18.6479 28.653 18.1761 29.2456 17.5728 29.918C16.348 31.2828 14.6663 32.8801 12.7226 34.0434ZM27.8542 22.2613L30.2985 24.0932L21.8371 26.2109L27.8542 22.2613ZM17.4498 14.529L19.6697 16.2115L11.6089 21.4115L15.0514 12.7112L17.4498 14.529Z" fill="black" stroke="black" stroke-width="6" />
@@ -319,6 +319,9 @@ export default function SignUp() {
             </Box>
           </form>
         )}
+        <Box w={'100%'} pt={'60px'}>
+          <Text textAlign={'right'}>© 2024 Payup. All rights reserved.</Text>
+        </Box>
       </Box>
     </Box>
   );
