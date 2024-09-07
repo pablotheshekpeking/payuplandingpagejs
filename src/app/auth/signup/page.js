@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { ArrowBackIcon, WarningTwoIcon } from "@chakra-ui/icons";
 import CustomInput from "@/app/components/custominput";
+import CustomPinInput from "@/app/components/pininput";
 
 export default function SignUp() {
   const [loading, setLoading] = useState(false);
@@ -27,13 +28,15 @@ export default function SignUp() {
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [isSignupComplete, setIsSignupComplete] = useState(false);
+  const [signupData, setSignupData] = useState(null); // Store signup data
+  const [otp, setOtp] = useState('');
   const toast = useToast();
 
   const handleNextStep = () => {
     setStep((prevStep) => prevStep + 1);
   };
 
-  const steps = 2; // Total number of steps
+  const steps = 3; // Total number of steps
   const currentStep = step; // This should be the current step from your state
 
   const handleBack = () => {
@@ -100,14 +103,8 @@ export default function SignUp() {
 
       const data = await response.json();
       if (response.ok) {
-        toast({
-          title: "Account created.",
-          description: "We've created your account for you.",
-          status: "success",
-          duration: 3000,
-          isClosable: true,
-        });
-        setIsSignupComplete(true);
+        setSignupData({ email }); // Store the email for later use
+        setStep(3); // Move to OTP step
       } else {
         throw new Error(data.message || 'Signup failed');
       }
@@ -123,12 +120,45 @@ export default function SignUp() {
     }
   };
 
-  // Redirect to login page when signup is complete
-  useEffect(() => {
-    if (isSignupComplete) {
-      window.location.href = './login';
+  const handleOtpSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!signupData || !signupData.email) {
+      toast({
+        title: "Error",
+        description: "Signup data is missing.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+      return;
     }
-  }, [isSignupComplete]);
+
+    try {
+      const otpResponse = await fetch('https://pay-up-api-fjwf.vercel.app/api/v1/users/verify-otp', {
+        method: 'POST',
+        body: JSON.stringify({ email: signupData.email, otp }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (otpResponse.ok) {
+        // Redirect to dashboard or complete the signup
+        window.location.href = '/dashboard';
+      } else {
+        const otpError = await otpResponse.json();
+        throw new Error(otpError.message || 'OTP verification failed');
+      }
+    } catch (error) {
+      console.error('OTP error:', error);
+      toast({
+        title: "An error occurred.",
+        description: error.message,
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
 
   return (
     <Box
@@ -334,6 +364,45 @@ export default function SignUp() {
               </Checkbox>
 
               <Button w={'100%'} h={'58px'} mt="24px" bg="black" type="submit" name="submit" color={'#FFF239'} borderRadius={'20px'}>{loading ? <Spinner size="md" color="#FFF239" /> : 'Continue'}</Button>
+            </Box>
+          </form>
+        )}
+
+        {step === 3 && (
+          <form onSubmit={handleOtpSubmit} style={{ width: '576px', maxWidth: '100%' }}>
+            <Box
+            w={'100%'}
+            display={'flex'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            p={'20px'}
+            h={'auto'}
+            borderRadius={'30px'}
+            gap={'12px'}
+            bg={'#FFF239'}
+            border={'2px solid #111317'}
+            alignItems={'center'} borderRight={'8px solid #111317'} borderBottom={'8px solid #111317'}
+          >
+            <Text>Enter OTP sent to {signupData.email}:</Text>
+            <CustomPinInput
+                type="text"
+                name="otp"
+                id="otp"
+                value={otp}
+                onChange={(value) => setOtp(value)}
+              />
+            <Button
+              w={'100%'}
+              h={'58px'}
+              mt="24px"
+              bg="black"
+              type="submit"
+              name="submit"
+              color={'#FFF239'}
+              borderRadius={'20px'}
+            >
+              {loading ? <Spinner size="md" color="#FFF239" /> : 'Continue'}
+            </Button>
             </Box>
           </form>
         )}
