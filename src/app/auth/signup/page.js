@@ -163,7 +163,7 @@ export default function SignUp() {
   return (
     <Box
       w={'full'}
-      h={'124vh'}
+      h={'100vh'}
       bg={'#F7EBE8'}
       display={'flex'}
       flexDirection={'row'}
@@ -187,20 +187,21 @@ export default function SignUp() {
             w={'100%'}
             display={['none', 'none', 'flex', 'flex']}
             justifyContent={'space-between'}
-            pt={'20px'}
-            pb={'80px'}
+            pt={'8px'}
+            pb={'40px'}
             alignItems={'center'}
+            h={'84px'}
           >
-            <Box display={'flex'} gap={'20px'} w={'50%'} alignItems={'center'}>
+            <Box display={'flex'} gap={'24px'} w={'50%'} alignItems={'center'}>
               <ArrowBackIcon
-                boxSize={[10, 10, 10, 10]}
+                boxSize={14}
                 border={"2px solid black"}
                 borderRadius={'12px'}
-                p={'12px'}
+                p={'10px'}
                 onClick={handleBack}
                 cursor={'pointer'}
               />
-              <Box w={'100%'}>
+              <Box w={'100%'} display={'flex'} flexDirection={'column'} gap={'8px'}>
                 <Text fontWeight={500} fontSize={'32px'}>{currentStep}/{steps}</Text>
                 <Progress
                   value={(currentStep / steps) * 100}
@@ -211,9 +212,9 @@ export default function SignUp() {
               </Box>
             </Box>
             <Box display={'flex'} justifyContent={'right'} h={'80px'}>
-              <Box w={'400px'} px={'24px'} py={'12px'} bg={'black'} display={'flex'} alignItems={'center'} borderRadius={'20px'}>
-                <Text color={'white'} w={'45%'}>Have an account?</Text>
-                <Link href={'./login'} style={{ padding: 20, width: '45%', height: '80px' }}>
+              <Box w={'400px'} px={'16px'} py={'12px'} bg={'black'} display={'flex'} alignItems={'center'} borderRadius={'20px'}>
+                <Text color={'white'} textAlign={'center'} w={'50%'}>Have an account?</Text>
+                <Link href={'./login'} style={{ padding: 20, width: '50%', height: '80px' }}>
                   <Box bg={'white'} h={'full'} w={'full'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'14px'} cursor={'pointer'}>
                     <Text textAlign={'center'} fontWeight={700}>Log in</Text>
                   </Box>
@@ -293,7 +294,7 @@ export default function SignUp() {
         )}
 
         {step === 2 && (
-          <form onSubmit={handleSubmit} style={{ width: '576px', maxWidth: '100%' }}>
+          <form onSubmit={handleSubmit} style={{ width: '500px', maxWidth: '100%' }}>
             <Box
               w={'100%'}
               display={'flex'}
@@ -301,7 +302,7 @@ export default function SignUp() {
               justifyContent={'center'}
               p={'20px'}
               h={'auto'}
-              borderRadius={'30px'} gap={'12px'} bg={'#FFF239'} border={'2px solid #111317'} alignItems={'center'} borderRight={'8px solid #111317'} borderBottom={'8px solid #111317'}
+              borderRadius={'30px'} gap={'4px'} bg={'#FFF239'} border={'2px solid #111317'} alignItems={'center'} borderRight={'8px solid #111317'} borderBottom={'8px solid #111317'}
             >
               <svg width="48" height="42" viewBox="0 0 48 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.7226 34.0434C10.1013 35.6123 7.49981 36.5924 5.35335 37.2003L5.44153 36.9731L19.1654 27.9646C19.108 28.0433 19.0407 28.1339 18.9641 28.2352C18.6479 28.653 18.1761 29.2456 17.5728 29.918C16.348 31.2828 14.6663 32.8801 12.7226 34.0434ZM27.8542 22.2613L30.2985 24.0932L21.8371 26.2109L27.8542 22.2613ZM17.4498 14.529L19.6697 16.2115L11.6089 21.4115L15.0514 12.7112L17.4498 14.529Z" fill="black" stroke="black" stroke-width="6" />
@@ -355,15 +356,20 @@ export default function SignUp() {
                 onChange={(e) => setPasswordConfirm(e.target.value)}
               />
 
+              <Box w={'full'} textAlign={'left'} pt={'8px'}>
               <Checkbox
                 isChecked={agreeToTerms}
                 onChange={(e) => setAgreeToTerms(e.target.checked)}
-                mb={'16px'}
+                w={'full'}
+                textAlign={'left'}
+                border={'black'}
               >
-                I agree to the Terms and Conditions
+                <Text letterSpacing={'0.4px'}>I agree to Pay Up’s <span style={{ fontWeight: 700, textDecoration: 'underline'}}>Terms and Conditions.</span></Text>
               </Checkbox>
+              <Button w={'100%'} h={'58px'} mt="8px" bg="black" type="submit" name="submit" color={'#FFF239'} borderRadius={'20px'}>{loading ? <Spinner size="md" color="#FFF239" /> : 'Continue'}</Button>
+              </Box>
 
-              <Button w={'100%'} h={'58px'} mt="24px" bg="black" type="submit" name="submit" color={'#FFF239'} borderRadius={'20px'}>{loading ? <Spinner size="md" color="#FFF239" /> : 'Continue'}</Button>
+              
             </Box>
           </form>
         )}
@@ -406,7 +412,7 @@ export default function SignUp() {
             </Box>
           </form>
         )}
-        <Box w={'100%'} pt={'60px'}>
+        <Box w={'100%'} pt={'40px'}>
           <Text textAlign={'right'}>© 2024 Payup. All rights reserved.</Text>
         </Box>
       </Box>
