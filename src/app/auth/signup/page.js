@@ -143,7 +143,7 @@ export default function SignUp() {
 
       if (otpResponse.ok) {
         // Redirect to dashboard or complete the signup
-        window.location.href = '/dashboard';
+        window.location.href = '/user/dashboard';
       } else {
         const otpError = await otpResponse.json();
         throw new Error(otpError.message || 'OTP verification failed');

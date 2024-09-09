@@ -71,7 +71,7 @@ export default function Login() {
         if (response.ok) {
           // Start a session with user details and redirect to dashboard
           localStorage.setItem('user', JSON.stringify(data.user));
-          router.push('/dashboard');
+          router.push('/user/dashboard');
         } else {
           throw new Error(data.message || 'OTP verification failed');
         }
