@@ -25,7 +25,7 @@ export default function DashboardSideNav() {
             </svg>
 
             <Box
-                display={'flex'}
+                display={['none', 'none', 'flex', 'flex']}
                 flexDirection={'column'}
                 alignItems={'center'}
                 gap={'20px'}
@@ -78,7 +78,7 @@ export default function DashboardSideNav() {
 
             </Box>
 
-            <Button onClick={handleLogout} bg={'none'} border={'none'}>
+            <Button onClick={handleLogout} bg={'none'} border={'none'} display={'flex'} gap={'8px'} mt={['10px', '10px', '0px', '0px']}>
                 <svg className="logout" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32" height="32" rx="10" fill="#EFEFEF" />
                     <rect width="32" height="32" rx="12" fill="#EFEFEF" />
@@ -93,7 +93,7 @@ export default function DashboardSideNav() {
                         </clipPath>
                     </defs>
                 </svg>
-
+                <Text display={['block', 'block', 'none', 'none']}>Logout</Text>
             </Button>
 
         </Box>
