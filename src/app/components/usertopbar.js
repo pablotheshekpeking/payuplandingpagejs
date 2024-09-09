@@ -21,7 +21,6 @@ export default function UserTopBar() {
             w={'full'}
             h={'50px'}
             display={'flex'}
-            justifyContent={'right'}
             alignItems={'center'}
         >
             <Box
@@ -29,6 +28,7 @@ export default function UserTopBar() {
                 display={'flex'}
                 gap={'24px'}
                 alignItems={'center'}
+                justifyContent={'right'}
             >
                 <Button
                     display={'flex'}
