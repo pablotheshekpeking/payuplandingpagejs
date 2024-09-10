@@ -63,10 +63,12 @@ export default function Dashboard() {
             </Box>
 
             <Box
-              w={'100%'}
+              w={['100%', '100%', '96%', '96%']}
               h={'100%'}
               px={['20px', '20px', '40px', '40px']}
               pt={'24px'}
+              display={'flex'}
+              flexDirection={'column'}
             >
               <UserTopBar />
 
@@ -207,7 +209,7 @@ export default function Dashboard() {
                       <Tbody>
                         <Tr>
                           <Td>{user.firstName} {user.lastName}</Td>
-                          <Td border={'0.5px solid #C1C1C1'}>#BD19389201</Td>
+                          <Td>#BD19389201</Td>
                           <Td>06/08/24 . 22:30</Td>
                           <Td isNumeric>$5,000</Td>
                           <Td>
@@ -221,7 +223,7 @@ export default function Dashboard() {
 
                         <Tr>
                           <Td>{user.firstName} {user.lastName}</Td>
-                          <Td border={'0.5px solid #C1C1C1'}>#BD19389201</Td>
+                          <Td>#BD19389201</Td>
                           <Td>06/08/24 . 22:30</Td>
                           <Td isNumeric>$5,000</Td>
                           <Td>
@@ -235,7 +237,7 @@ export default function Dashboard() {
 
                         <Tr>
                           <Td>{user.firstName} {user.lastName}</Td>
-                          <Td border={'0.5px solid #C1C1C1'}>#BD19389201</Td>
+                          <Td>#BD19389201</Td>
                           <Td>06/08/24 . 22:30</Td>
                           <Td isNumeric>$5,000</Td>
                           <Td>
@@ -249,7 +251,7 @@ export default function Dashboard() {
 
                         <Tr>
                           <Td>{user.firstName} {user.lastName}</Td>
-                          <Td border={'0.5px solid #C1C1C1'}>#BD19389201</Td>
+                          <Td>#BD19389201</Td>
                           <Td>06/08/24 . 22:30</Td>
                           <Td isNumeric>$5,000</Td>
                           <Td>
