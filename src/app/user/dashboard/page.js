@@ -51,6 +51,7 @@ export default function Dashboard() {
           display={'flex'}
           h={'100%'}
           flexDirection={'column'}
+          overflowX={'hidden'}
         >
           <Box
             w={'full'}
