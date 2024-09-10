@@ -153,6 +153,7 @@ export default function Login() {
                   isChecked={agreeToTerms}
                   onChange={(e) => setAgreeToTerms(e.target.checked)}
                   mb={'16px'}
+                  display={'none'}
                 >
                   I agree to the Terms and Conditions
                 </Checkbox>
