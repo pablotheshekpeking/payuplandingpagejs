@@ -16,18 +16,23 @@ export default function Login() {
     otp: null,
   });
 
+  const { user, loading: userLoading } = useAuth();
+
   function handleInput({ target: { name, value } }) {
     setInput((state) => ({ ...state, [name]: value }));
   }
 
-  const { isAuthenticated, loading: isAuthenticating } = useAuth();
-
   useEffect(() => {
-    if (isAuthenticated) router.push("/user/dashboard");
-  }, [isAuthenticated]);
+    if (userLoading) return;
 
-  if (isAuthenticating) return <SpinnerFull />;
-  if (!isAuthenticated)
+    if (user) {
+      router.push("/user/dashboard");
+    }
+  }, [user, userLoading, router]);
+
+  if (userLoading) return <SpinnerFull />;
+
+  if (!user)
     return (
       <Box
         bg={"#F7EBE8"}

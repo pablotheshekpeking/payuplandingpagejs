@@ -17,7 +17,7 @@ const CustomPinInput = ({ name, id, value, onChange, fontSize = "1.6rem" }) => {
       >
         <PinInputField
           fontSize={fontSize}
-          fontWeight={"bold"}
+          fontWeight={"medium"}
           bg={"white"}
           height="50px"
           width="50px"
@@ -26,7 +26,6 @@ const CustomPinInput = ({ name, id, value, onChange, fontSize = "1.6rem" }) => {
 
         <PinInputField
           fontSize={fontSize}
-          fontWeight={"bold"}
           bg={"white"}
           height="50px"
           width="50px"
@@ -34,7 +33,7 @@ const CustomPinInput = ({ name, id, value, onChange, fontSize = "1.6rem" }) => {
         />
         <PinInputField
           fontSize={fontSize}
-          fontWeight={"bold"}
+          fontWeight={"medium"}
           bg={"white"}
           height="50px"
           width="50px"
@@ -42,7 +41,7 @@ const CustomPinInput = ({ name, id, value, onChange, fontSize = "1.6rem" }) => {
         />
         <PinInputField
           fontSize={fontSize}
-          fontWeight={"bold"}
+          fontWeight={"medium"}
           bg={"white"}
           height="50px"
           width="50px"
@@ -50,7 +49,7 @@ const CustomPinInput = ({ name, id, value, onChange, fontSize = "1.6rem" }) => {
         />
         <PinInputField
           fontSize={fontSize}
-          fontWeight={"bold"}
+          fontWeight={"medium"}
           bg={"white"}
           height="50px"
           width="50px"
@@ -58,7 +57,7 @@ const CustomPinInput = ({ name, id, value, onChange, fontSize = "1.6rem" }) => {
         />
         <PinInputField
           fontSize={fontSize}
-          fontWeight={"bold"}
+          fontWeight={"medium"}
           bg={"white"}
           height="50px"
           width="50px"

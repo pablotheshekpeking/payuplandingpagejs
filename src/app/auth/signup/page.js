@@ -14,13 +14,8 @@ export default function SignUp() {
   const [otp, setOtp] = useState(null);
   const [email, setEmail] = useState(null);
 
+  const { user, loading: userLoading } = useAuth();
   const router = useRouter();
-
-  const { isAuthenticated, loading: isAuthenticating } = useAuth();
-
-  useEffect(() => {
-    if (isAuthenticated) return router.push("/user/dashboard");
-  }, [isAuthenticated]);
 
   const steps = 3; // Total number of steps
   const currentStep = step;
@@ -37,9 +32,17 @@ export default function SignUp() {
     setStep((prevStep) => (prevStep > 1 ? prevStep - 1 : 1));
   };
 
-  if (isAuthenticating) return <SpinnerFull />;
+  useEffect(() => {
+    if (userLoading) return;
 
-  if (!isAuthenticated)
+    if (user) {
+      router.push("/user/dashboard");
+    }
+  }, [user, userLoading, router]);
+
+  if (userLoading) return <SpinnerFull />;
+
+  if (!user)
     return (
       <Box
         bg={"#F7EBE8"}
