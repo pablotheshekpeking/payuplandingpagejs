@@ -1,8 +1,12 @@
 "use client";
-import { useEffect } from "react";
-import useUser from "../_hooks/useUser";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useRouter } from "next/navigation";
+import { verifyToken } from "../_lib/data-service";
+import useToken from "../_hooks/useToken";
+import { Spinner, Box } from "@chakra-ui/react";
+import SpinnerFull from "./SpinnerFull";
+import toast from "react-hot-toast";
 
 ProtectedRoute.propTypes = {
   children: PropTypes.any,
@@ -10,12 +14,25 @@ ProtectedRoute.propTypes = {
 
 function ProtectedRoute({ children }) {
   const router = useRouter();
+  const { token } = useToken();
+  const [loading, setLoading] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
   useEffect(() => {
-    if (!user) router.push("/auth/login");
+    (async function authenticate() {
+      try {
+        await verifyToken(token);
+        setAuthenticated(true);
+      } catch (err) {
+        console.log(err);
+        toast.error("Please login in.");
+        router.push("/auth/login");
+      } finally {
+        setLoading(false);
+      }
+    })();
   }, []);
-  const { user } = useUser();
-  console.log(user);
-  return user ? children : null;
+
+  return loading ? <SpinnerFull /> : authenticated ? children : null;
 }
 
 export default ProtectedRoute;
