@@ -121,7 +121,7 @@ function OtpForm({ email, otp, setOtp, setStep }) {
             Security Verification
           </Text>
           <Text fontSize={"1.4rem"} mb={"2.4rem"}>
-            Enter the code sent to your domain <strong>@email.com</strong>
+            Enter the code sent to <strong>{email}</strong>
           </Text>
           <Text
             textAlign={"start"}
