@@ -44,8 +44,7 @@ function ProgressBar({ handleBack, currentStep, steps }) {
       </Box>
       <Box display={"flex"} justifyContent={"right"} h={"8rem"}>
         <Box
-          px={"1.6rem"}
-          py={"1.2rem"}
+          px={"1.5rem"}
           bg={"black"}
           display={"flex"}
           gap={"1.6rem"}
@@ -62,7 +61,7 @@ function ProgressBar({ handleBack, currentStep, steps }) {
             display={"flex"}
             alignItems={"center"}
             justifyContent={"center"}
-            borderRadius={"14px"}
+            borderRadius={"2rem"}
             cursor={"pointer"}
           >
             <Link href={"./login"}>Log in</Link>

@@ -37,8 +37,7 @@ function AuthProvider({ children }) {
     if (!token) {
       toast.error("Please login!");
       console.log("No token pushed back to login");
-      return;
-      //   return router.push("/auth/login");
+      return router.push("/auth/login");
     }
     (async function authenticate() {
       try {
@@ -46,7 +45,7 @@ function AuthProvider({ children }) {
         setAuthenticated(true);
       } catch (err) {
         console.log(err);
-        toast.error(err.message);
+        toast.error("Please log in again!");
         router.push("/auth/login");
       } finally {
         setLoading(false);
