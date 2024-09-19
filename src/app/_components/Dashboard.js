@@ -14,10 +14,12 @@ import {
   Td,
   TableContainer,
 } from "@chakra-ui/react";
-import useUser from "@/app/_hooks/useUser";
+import { useAuth } from "../_contexts/AuthProvider";
 
 export default function Dashboard() {
-  const { user } = useUser();
+  const { user } = useAuth();
+
+  console.log(user);
 
   return (
     <Box
@@ -52,7 +54,7 @@ export default function Dashboard() {
             <UserTopBar />
 
             <Text fontSize={"2.4rem"} pt={["30px", "30px", "0px", "0px"]}>
-              Welcome {user.firstName}!
+              Welcome {user?.firstName}!
             </Text>
             <Text fontWeight={700} fontSize={"32px"}>
               Dashboard
@@ -487,7 +489,7 @@ export default function Dashboard() {
                       <Tr>
                         <Td fontSize={"1.6rem"}>
                           <Text py={"1.5rem"}>
-                            {user.firstName} {user.lastName}
+                            {user?.firstName} {user?.lastName}
                           </Text>
                         </Td>
                         <Td fontSize={"1.6rem"}>#BD19389201</Td>
@@ -519,7 +521,7 @@ export default function Dashboard() {
                       <Tr>
                         <Td fontSize={"1.6rem"}>
                           <Text py={"1.5rem"}>
-                            {user.firstName} {user.lastName}
+                            {user?.firstName} {user?.lastName}
                           </Text>
                         </Td>
                         <Td fontSize={"1.6rem"}>#BD19389201</Td>
@@ -551,7 +553,7 @@ export default function Dashboard() {
                       <Tr>
                         <Td fontSize={"1.6rem"}>
                           <Text py={"1.5rem"}>
-                            {user.firstName} {user.lastName}
+                            {user?.firstName} {user?.lastName}
                           </Text>
                         </Td>
                         <Td fontSize={"1.6rem"}>#BD19389201</Td>
@@ -583,7 +585,7 @@ export default function Dashboard() {
                       <Tr>
                         <Td fontSize={"1.6rem"}>
                           <Text py={"1.5rem"}>
-                            {user.firstName} {user.lastName}
+                            {user?.firstName} {user?.lastName}
                           </Text>
                         </Td>
                         <Td fontSize={"1.6rem"}>#BD19389201</Td>

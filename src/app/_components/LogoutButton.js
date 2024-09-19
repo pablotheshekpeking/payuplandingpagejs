@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Text } from "@chakra-ui/react";
-import useUser from "../_hooks/useUser";
 import { useRouter } from "next/navigation";
+import { useAuth } from "../_contexts/AuthProvider";
 
 function LogoutButton() {
   const router = useRouter();
-  const { logout } = useUser();
+  const { logout } = useAuth();
   return (
     <Button
       onClick={() => {

@@ -5,9 +5,8 @@ import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-import useUser from "../_hooks/useUser";
-import useToken from "../_hooks/useToken";
 import { verifyOtp } from "../_lib/data-service";
+import { useAuth } from "../_contexts/AuthProvider";
 
 OtpForm.propTypes = {
   email: PropTypes.string.isRequired,
@@ -22,8 +21,7 @@ function OtpForm({ email, otp, setOtp, setStep }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [time, setTimer] = useState(OTP_EXPIRES);
-  const { setUser } = useUser();
-  const { setToken } = useToken();
+  const { setUser } = useAuth();
 
   const min = `${Math.floor(time / 60)}`.padStart(2, "0");
   const sec = `${time % 60}`.padStart(2, "0");
@@ -51,8 +49,7 @@ function OtpForm({ email, otp, setOtp, setStep }) {
     setLoading(true);
     try {
       const data = await verifyOtp(email, otp);
-      setUser(data.user);
-      setToken(data.token);
+      setUser({ ...data.user, token: data.token });
       router.push("/user/dashboard");
     } catch (err) {
       console.log(err.message);
