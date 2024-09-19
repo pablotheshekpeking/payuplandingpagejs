@@ -22,7 +22,7 @@ export default function Login() {
 
   useEffect(() => {
     if (user) router.push("/user/dashboard");
-  }, [user]);
+  }, []);
 
   if (user) return null;
   return (
