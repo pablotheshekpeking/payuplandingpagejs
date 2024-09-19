@@ -1,41 +1,39 @@
+import React from "react";
 import { Box, Center } from "@chakra-ui/react";
-import Navbar from "./components/navbar";
-import Hero from "./components/hero";
-import Solution from "./components/solution";
-import Features from "./components/features";
-import Why from "./components/why";
-import BigImg from "./components/bigimage";
-import Open from "./components/openaccount";
-import FAQ from "./components/faq";
-import "../../public/global.css"
-import Contact from "./components/contact";
-import Track from "./components/track";
-import BigImgMobile from "./components/bigimagemobile";
-import Footer from "./components/footer";
+import Navbar from "./_components/navbar";
+import Hero from "./_components/hero";
+import Solution from "./_components/solution";
+import Features from "./_components/features";
+import Why from "./_components/why";
+import BigImg from "./_components/bigimage";
+import Open from "./_components/openaccount";
+import FAQ from "./_components/faq";
+import Contact from "./_components/contact";
+import Track from "./_components/track";
+import BigImgMobile from "./_components/bigimagemobile";
+import Footer from "./_components/footer";
 
 export default function Home() {
   return (
     <Box
-      bg={'#F7EBE8'}
-      display={'flex'}
-      flexDirection={'column'}
-      maxW={'1728px'}
-      m={'0 auto'}
+      bg={"#F7EBE8"}
+      display={"flex"}
+      flexDirection={"column"}
+      maxW={"173srem"}
+      m={"0 auto"}
     >
       <Box
-        bg={'#F7EBE8'}
-        w={'full'}
-        px={['10px', '10px', '', '']}
-        scrollBehavior={'smooth'}
-        m={'0px'}
-        p={'0px'}
-        fontFamily={'Roobert Pro'}
-        display={'flex'}
-        flexDirection={'column'}
+        bg={"#F7EBE8"}
+        w={"full"}
+        px={["10px", "10px", "", ""]}
+        scrollBehavior={"smooth"}
+        m={"0px"}
+        p={"0px"}
+        fontFamily={"Roobert Pro"}
+        display={"flex"}
+        flexDirection={"column"}
       >
-        <Center w={'full'} display={'flex'} px={'24px'} justifyContent={'center'} pt={'24px'} position={'fixed'} zIndex={999} >
-          <Navbar />
-        </Center>
+        <Navbar />
 
         <section id="top">
           <Hero />
@@ -49,11 +47,11 @@ export default function Home() {
 
         <Why />
 
-        <Box display={['none', 'none', 'none', 'flex']}>
+        <Box display={["none", "none", "none", "flex"]}>
           <BigImg />
         </Box>
 
-        <Box display={['flex', 'flex', 'flex', 'none']}>
+        <Box display={["flex", "flex", "flex", "none"]}>
           <BigImgMobile />
         </Box>
 
@@ -61,16 +59,15 @@ export default function Home() {
 
         <Open />
 
-        <section id="faq" style={{ paddingBottom: '80px' }}>
+        <section id="faq" style={{ paddingBottom: "4rem" }}>
           <FAQ />
         </section>
 
         <section id="contact">
           <Contact />
         </section>
-
-
       </Box>
-      <Footer /></Box>
+      <Footer />
+    </Box>
   );
 }
