@@ -17,7 +17,7 @@ import AccountType from "@/app/_components/AccountType";
 // };
 
 export default function SignUp() {
-  const [step, setStep] = useState(3);
+  const [step, setStep] = useState(1);
   const [otp, setOtp] = useState(null);
   const [email, setEmail] = useState(null);
 
