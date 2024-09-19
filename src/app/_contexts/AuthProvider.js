@@ -16,8 +16,8 @@ function AuthProvider({ children }) {
     const storedUser = localStorage.getItem("user");
     console.log("here1");
     if (storedUser) {
-      // The fact that the code is not entering here it causes setLoading not to be false
-      console.log("here2");
+      // when storedUser is not defined, setLoading is stuck at true
+
       setUser(JSON.parse(storedUser));
     }
     console.log("here3");

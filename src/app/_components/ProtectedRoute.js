@@ -23,7 +23,7 @@ function ProtectedRoute({ children }) {
 
     // If no user token, redirect to login
     if (!user?.token) {
-      toast.error("Please login!");
+      toast.error("Login to access your dashboard!");
       setAuthenticating(false);
       return router.push("/auth/login");
     }
@@ -41,7 +41,7 @@ function ProtectedRoute({ children }) {
         setAuthenticating(false);
       }
     })();
-  }, [user]);
+  }, [user, isUserLoading]);
 
   if (isAuthenticating) return <SpinnerFull />;
 
