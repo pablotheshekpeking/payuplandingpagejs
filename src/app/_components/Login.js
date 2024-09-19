@@ -24,7 +24,7 @@ export default function Login() {
     if (user) router.push("/user/dashboard");
   }, []);
 
-  if (user) return null;
+  if (!user) return null;
   return (
     <Box
       bg={"#F7EBE8"}
