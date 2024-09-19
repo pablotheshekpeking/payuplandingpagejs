@@ -18,7 +18,7 @@ function AuthProvider({ children }) {
   const [isAuthenticated, setAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const token = user?.token;
+  let token = user?.token;
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -35,8 +35,8 @@ function AuthProvider({ children }) {
 
   useEffect(() => {
     if (!token) {
+      setLoading(false);
       toast.error("Please login!");
-      console.log("No token pushed back to login");
       return router.push("/auth/login");
     }
     (async function authenticate() {
