@@ -14,7 +14,7 @@ export default function SignUp() {
   const [otp, setOtp] = useState(null);
   const [email, setEmail] = useState(null);
 
-  const { user, loading: userLoading } = useAuth();
+  const { user, isAuthenticating, authenticated } = useAuth();
   const router = useRouter();
 
   const steps = 3; // Total number of steps
@@ -33,63 +33,68 @@ export default function SignUp() {
   };
 
   useEffect(() => {
-    if (userLoading) return;
+    console.log("authenticating");
+    if (isAuthenticating) return;
 
-    if (user) {
+    console.log("finish authenticating");
+    if (authenticated) {
       router.push("/user/dashboard");
     }
-  }, [user, userLoading, router]);
+  }, [isAuthenticating, router]);
 
-  if (userLoading) return <SpinnerFull />;
+  if (isAuthenticating) return <SpinnerFull />;
 
-  if (!user)
-    return (
-      <Box
-        bg={"#F7EBE8"}
-        minH={"100vh"}
-        w={"100%"}
-        pt={"3rem"}
-        px={"4rem"}
-        display={["flex", "flex", "block", "block"]}
-        alignItems={"center"}
-        justifyContent={"center"}
-      >
-        <ProgressBar
-          steps={steps}
-          currentStep={currentStep}
-          handleBack={handleBack}
-        />
-
+  if (!authenticated)
+    if (!user)
+      return (
         <Box
-          w={"full"}
-          display={"flex"}
-          flexDirection={"row"}
+          bg={"#F7EBE8"}
+          minH={"100vh"}
+          w={"100%"}
+          pt={"3rem"}
+          px={"4rem"}
+          display={["flex", "flex", "block", "block"]}
+          alignItems={"center"}
           justifyContent={"center"}
-          maxW={"60rem"}
-          m={"0 auto"}
         >
+          <ProgressBar
+            steps={steps}
+            currentStep={currentStep}
+            handleBack={handleBack}
+          />
+
           <Box
+            w={"full"}
             display={"flex"}
-            flexDirection={"column"}
-            h={"auto"}
+            flexDirection={"row"}
             justifyContent={"center"}
-            position="relative"
-            alignItems={"center"}
+            maxW={"60rem"}
+            m={"0 auto"}
           >
-            {step === 1 && <AccountType handleNextStep={handleNextStep} />}
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              h={"auto"}
+              justifyContent={"center"}
+              position="relative"
+              alignItems={"center"}
+            >
+              {step === 1 && <AccountType handleNextStep={handleNextStep} />}
 
-            {step === 2 && <SignupForm setEmail={setEmail} setStep={setStep} />}
+              {step === 2 && (
+                <SignupForm setEmail={setEmail} setStep={setStep} />
+              )}
 
-            {step === 3 && (
-              <OtpForm
-                otp={otp}
-                email={email}
-                setStep={setStep}
-                setOtp={handleInput}
-              />
-            )}
+              {step === 3 && (
+                <OtpForm
+                  otp={otp}
+                  email={email}
+                  setStep={setStep}
+                  setOtp={handleInput}
+                />
+              )}
+            </Box>
           </Box>
         </Box>
-      </Box>
-    );
+      );
 }

@@ -12,11 +12,7 @@ ProtectedRoute.propTypes = {
 
 function ProtectedRoute({ children }) {
   const router = useRouter();
-  const {
-    loading: isAuthenticating,
-    authenticated,
-    isLogoutAction,
-  } = useAuth();
+  const { isAuthenticating, authenticated, isLogoutAction } = useAuth();
 
   useEffect(() => {
     if (!isAuthenticating && !authenticated) {

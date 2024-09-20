@@ -12,7 +12,7 @@ const AuthContext = createContext();
 function AuthProvider({ children }) {
   const router = useRouter();
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [isAuthenticating, setIsAuthenticating] = useState(true);
   const [authenticated, setAuthenticated] = useState(false);
   const [isLogoutAction, setLogoutAction] = useState(false);
 
@@ -27,7 +27,7 @@ function AuthProvider({ children }) {
 
       setUser(JSON.parse(storedUser));
     }
-    setLoading(false);
+    setIsAuthenticating(false);
   }, []);
 
   // Check authenticated on mount and on router change
@@ -36,14 +36,14 @@ function AuthProvider({ children }) {
 
     (async function authenticate() {
       console.log("auth function");
-      setLoading(true);
+      setIsAuthenticating(true);
       try {
         await verifyToken(user?.token);
         setAuthenticated(true);
       } catch {
         setAuthenticated(false);
       } finally {
-        setLoading(false);
+        setIsAuthenticating(false);
       }
     })();
   }, [router, user]);
@@ -65,7 +65,14 @@ function AuthProvider({ children }) {
 
   return (
     <AuthContext.Provider
-      value={{ user, setUser, logout, loading, authenticated, isLogoutAction }}
+      value={{
+        user,
+        setUser,
+        logout,
+        isAuthenticating,
+        authenticated,
+        isLogoutAction,
+      }}
     >
       {children}
     </AuthContext.Provider>
