@@ -16,6 +16,7 @@ function ProtectedRoute({ children }) {
 
   //when i refresh dashboard page this runs takes me to login
   useEffect(() => {
+    // isAuthenticating should not be false when it hasnt finished authenticating
     console.log(isAuthenticating, authenticated);
     if (!isAuthenticating && !authenticated) {
       if (!isLogoutAction) {

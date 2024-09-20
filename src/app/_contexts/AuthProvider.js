@@ -26,24 +26,25 @@ function AuthProvider({ children }) {
       // when storedUser is not defined, setLoading is stuck at true
 
       setUser(JSON.parse(storedUser));
+    } else {
+      setIsAuthenticating(false);
     }
   }, []);
 
   // Check authenticated on mount and on router change
   useEffect(() => {
     if (!user) {
-      setIsAuthenticating(false);
+      setAuthenticated(false);
       return;
     }
 
     (async function authenticate() {
-      console.log("auth function");
       setIsAuthenticating(true);
       try {
         await verifyToken(user?.token);
         setAuthenticated(true);
       } catch {
-        setAuthenticated(false);
+        logout();
       } finally {
         setIsAuthenticating(false);
       }
@@ -83,9 +84,9 @@ function AuthProvider({ children }) {
 
 export function useAuth() {
   const context = useContext(AuthContext);
-  if (!context) {
+  if (!context)
     throw new Error("You cannot use Authentication outside its provider");
-  }
+
   return context;
 }
 
