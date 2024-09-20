@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import SpinnerFull from "./SpinnerFull";
 import { useAuth } from "../_contexts/AuthProvider";
-import { verifyToken } from "../_lib/data-service";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
@@ -13,39 +12,27 @@ ProtectedRoute.propTypes = {
 
 function ProtectedRoute({ children }) {
   const router = useRouter();
-  const { user, loading: isUserLoading } = useAuth();
-  const [isAuthenticated, setAuthenticated] = useState(false);
-  const [isAuthenticating, setAuthenticating] = useState(true);
+  const {
+    loading: isAuthenticating,
+    authenticated,
+    isLogoutAction,
+  } = useAuth();
 
   useEffect(() => {
-    console.log(isUserLoading);
-    if (isUserLoading) return;
-
-    // If no user token, redirect to login
-    if (!user?.token) {
-      toast.error("Login to access your dashboard!");
-      setAuthenticating(false);
-      return router.push("/auth/login");
-    }
-
-    // Validate token via backend
-    (async function authenticate() {
-      try {
-        await verifyToken(user?.token);
-        setAuthenticated(true);
-      } catch (err) {
-        console.log("really");
-        toast.error(err.message);
-        router.push("/auth/login");
-      } finally {
-        setAuthenticating(false);
+    if (!isAuthenticating && !authenticated) {
+      if (!isLogoutAction) {
+        toast.error("Login to access your dashboard");
       }
-    })();
-  }, [user, isUserLoading]);
+      // If not authenticated after loading, redirect to login
+      router.push("/auth/login");
+    }
+  }, [router, isAuthenticating, authenticated]);
 
+  // Show a loading spinner while authentication is still in progress
   if (isAuthenticating) return <SpinnerFull />;
 
-  if (isAuthenticated) return children;
+  // If authenticated, render the protected content
+  if (authenticated) return children;
 
   return null;
 }
