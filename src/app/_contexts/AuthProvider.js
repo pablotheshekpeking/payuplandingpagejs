@@ -32,7 +32,6 @@ function AuthProvider({ children }) {
     // Going to dashboard when user is not logged in will work normal
     // But refreshing the page when the user is on dashboard will
     // lead to weird behaviours
-    setIsAuthenticating(false);
   }, []);
 
   // Check authenticated on mount and on router change
