@@ -14,7 +14,9 @@ function ProtectedRoute({ children }) {
   const router = useRouter();
   const { isAuthenticating, authenticated, isLogoutAction } = useAuth();
 
+  //when i refresh dashboard page this runs takes me to login
   useEffect(() => {
+    console.log(isAuthenticating, authenticated);
     if (!isAuthenticating && !authenticated) {
       if (!isLogoutAction) {
         toast.error("Login to access your dashboard");

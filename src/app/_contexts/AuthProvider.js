@@ -27,6 +27,11 @@ function AuthProvider({ children }) {
 
       setUser(JSON.parse(storedUser));
     }
+    // The issue is knowing when to set this to false
+    // If i leave this here two things will happen
+    // Going to dashboard when user is not logged in will work normal
+    // But refreshing the page when the user is on dashboard will
+    // lead to weird behaviours
     setIsAuthenticating(false);
   }, []);
 

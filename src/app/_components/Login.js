@@ -16,7 +16,7 @@ export default function Login() {
     otp: null,
   });
 
-  const { loading: isAuthenticating, authenticated } = useAuth();
+  const { isAuthenticating, authenticated } = useAuth();
 
   function handleInput({ target: { name, value } }) {
     setInput((state) => ({ ...state, [name]: value }));
