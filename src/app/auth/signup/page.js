@@ -14,7 +14,7 @@ export default function SignUp() {
   const [otp, setOtp] = useState(null);
   const [email, setEmail] = useState(null);
 
-  const { user, isAuthenticating, authenticated } = useAuth();
+  const { isAuthenticating, authenticated } = useAuth();
   const router = useRouter();
 
   const steps = 3; // Total number of steps
@@ -45,56 +45,53 @@ export default function SignUp() {
   if (isAuthenticating) return <SpinnerFull />;
 
   if (!authenticated)
-    if (!user)
-      return (
+    return (
+      <Box
+        bg={"#F7EBE8"}
+        minH={"100vh"}
+        w={"100%"}
+        pt={"3rem"}
+        px={"4rem"}
+        display={["flex", "flex", "block", "block"]}
+        alignItems={"center"}
+        justifyContent={"center"}
+      >
+        <ProgressBar
+          steps={steps}
+          currentStep={currentStep}
+          handleBack={handleBack}
+        />
+
         <Box
-          bg={"#F7EBE8"}
-          minH={"100vh"}
-          w={"100%"}
-          pt={"3rem"}
-          px={"4rem"}
-          display={["flex", "flex", "block", "block"]}
-          alignItems={"center"}
+          w={"full"}
+          display={"flex"}
+          flexDirection={"row"}
           justifyContent={"center"}
+          maxW={"60rem"}
+          m={"0 auto"}
         >
-          <ProgressBar
-            steps={steps}
-            currentStep={currentStep}
-            handleBack={handleBack}
-          />
-
           <Box
-            w={"full"}
             display={"flex"}
-            flexDirection={"row"}
+            flexDirection={"column"}
+            h={"auto"}
             justifyContent={"center"}
-            maxW={"60rem"}
-            m={"0 auto"}
+            position="relative"
+            alignItems={"center"}
           >
-            <Box
-              display={"flex"}
-              flexDirection={"column"}
-              h={"auto"}
-              justifyContent={"center"}
-              position="relative"
-              alignItems={"center"}
-            >
-              {step === 1 && <AccountType handleNextStep={handleNextStep} />}
+            {step === 1 && <AccountType handleNextStep={handleNextStep} />}
 
-              {step === 2 && (
-                <SignupForm setEmail={setEmail} setStep={setStep} />
-              )}
+            {step === 2 && <SignupForm setEmail={setEmail} setStep={setStep} />}
 
-              {step === 3 && (
-                <OtpForm
-                  otp={otp}
-                  email={email}
-                  setStep={setStep}
-                  setOtp={handleInput}
-                />
-              )}
-            </Box>
+            {step === 3 && (
+              <OtpForm
+                otp={otp}
+                email={email}
+                setStep={setStep}
+                setOtp={handleInput}
+              />
+            )}
           </Box>
         </Box>
-      );
+      </Box>
+    );
 }
