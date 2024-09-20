@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <>
       <Box
-        zIndex={99}
+        zIndex={999}
         width={"97%"}
         h={"auto"}
         ml={"1rem"}

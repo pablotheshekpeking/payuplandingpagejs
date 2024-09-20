@@ -61,7 +61,7 @@ function ProgressBar({ handleBack, currentStep, steps }) {
             display={"flex"}
             alignItems={"center"}
             justifyContent={"center"}
-            borderRadius={"2rem"}
+            borderRadius={"1rem"}
             cursor={"pointer"}
           >
             <Link href={"./login"}>Log in</Link>
