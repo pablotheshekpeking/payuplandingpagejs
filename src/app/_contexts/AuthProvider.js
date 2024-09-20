@@ -27,16 +27,14 @@ function AuthProvider({ children }) {
 
       setUser(JSON.parse(storedUser));
     }
-    // The issue is knowing when to set this to false
-    // If i leave this here two things will happen
-    // Going to dashboard when user is not logged in will work normal
-    // But refreshing the page when the user is on dashboard will
-    // lead to weird behaviours
   }, []);
 
   // Check authenticated on mount and on router change
   useEffect(() => {
-    if (!user) return;
+    if (!user) {
+      setIsAuthenticating(false);
+      return;
+    }
 
     (async function authenticate() {
       console.log("auth function");
