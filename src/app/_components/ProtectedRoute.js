@@ -23,7 +23,7 @@ function ProtectedRoute({ children }) {
         toast.error("Login to access your dashboard");
       }
       // If not authenticated after loading, redirect to login
-      router.push("/auth/login");
+      router.push("/login");
     }
   }, [router, isAuthenticating, authenticated]);
 

@@ -39,7 +39,6 @@ function AccountType({ handleNextStep }) {
           alignItems={"center"}
           justifyContent={"center"}
           borderRightRadius={"8px"}
-          border={"1px solid #11131761"}
         >
           <Text>Merchant</Text>
         </Box>
@@ -52,6 +51,8 @@ function AccountType({ handleNextStep }) {
         display={"flex"}
         borderRadius={"20px"}
         border={"1px solid black"}
+        borderRight={"5px solid #111317"}
+        borderBottom={"5px solid #111317"}
       >
         <Box
           w={"60%"}

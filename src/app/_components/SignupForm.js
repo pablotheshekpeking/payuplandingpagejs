@@ -76,30 +76,36 @@ function SignupForm({ setStep, setEmail }) {
           Create an Account
         </Text>
         <Box display={"flex"} flexDirection="column" width="100%">
-          <Box>
-            <CustomInput
-              disabled={loading}
-              type="text"
-              placeholder="First Name"
-              name="firstName"
-              id="firstName"
-              {...register("firstName", { required: "This field is required" })}
-            />
+          <Box display={"flex"} gap={"1rem"}>
+            <Box width={"50%"}>
+              <CustomInput
+                disabled={loading}
+                type="text"
+                placeholder="First Name"
+                name="firstName"
+                id="firstName"
+                {...register("firstName", {
+                  required: "This field is required",
+                })}
+              />
 
-            <Error>{errors?.firstName?.message}</Error>
-          </Box>
+              <Error>{errors?.firstName?.message}</Error>
+            </Box>
 
-          <Box>
-            <CustomInput
-              disabled={loading}
-              type="text"
-              placeholder="Last Name"
-              name="lastName"
-              id="lastName"
-              {...register("lastName", { required: "This field is required" })}
-            />
+            <Box width={"50%"}>
+              <CustomInput
+                disabled={loading}
+                type="text"
+                placeholder="Last Name"
+                name="lastName"
+                id="lastName"
+                {...register("lastName", {
+                  required: "This field is required",
+                })}
+              />
 
-            <Error>{errors?.lastName?.message}</Error>
+              <Error>{errors?.lastName?.message}</Error>
+            </Box>
           </Box>
 
           <Box>
@@ -162,8 +168,8 @@ function SignupForm({ setStep, setEmail }) {
           </Box>
         </Box>
 
-        <Box w={"full"} textAlign={"left"} pt={"8px"}>
-          <Box pt="1.5rem" display="flex" gap="1rem" alignItems="center">
+        <Box w={"full"} textAlign={"left"}>
+          <Box display="flex" gap="1rem" alignItems="center">
             <input
               style={{
                 width: "2.3rem",

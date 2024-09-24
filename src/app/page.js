@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Navbar from "./_components/navbar";
 import Hero from "./_components/hero";
 import Solution from "./_components/solution";

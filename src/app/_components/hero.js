@@ -130,7 +130,7 @@ export default function Hero() {
             width={[100, 100, 169.05, 169.05]}
             height={[100, 100, 195.2, 195.2]}
             zIndex={800}
-            top={["30vh", "350px", "460px", "320px"]}
+            top={["10vh", "350px", "300px", "200px"]}
             left={["50px", "50px", "180px", "436px"]}
           />
 

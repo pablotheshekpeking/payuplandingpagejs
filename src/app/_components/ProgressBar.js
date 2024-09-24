@@ -17,7 +17,6 @@ function ProgressBar({ handleBack, currentStep, steps }) {
       display={["none", "none", "flex", "flex"]}
       justifyContent={"space-between"}
       alignItems={"center"}
-      mb={"8rem"}
     >
       <Box display={"flex"} gap={"2.4rem"} w={"50%"} alignItems={"start"}>
         <ArrowBackIcon
@@ -42,22 +41,23 @@ function ProgressBar({ handleBack, currentStep, steps }) {
           />
         </Box>
       </Box>
-      <Box display={"flex"} justifyContent={"right"} h={"8rem"}>
+      <Box display={"flex"} justifyContent={"right"} h={"5.6rem"}>
         <Box
-          px={"1.5rem"}
+          px={"1.6rem"}
+          py="1.2rem"
           bg={"black"}
           display={"flex"}
           gap={"1.6rem"}
           alignItems={"center"}
-          borderRadius={"2rem"}
+          borderRadius={"1rem"}
         >
           <Text color={"white"}>Have an account?</Text>
 
           <Box
             bg={"white"}
-            h={"4.5rem"}
+            h={"4rem"}
             fontWeight={"bold"}
-            width={"15rem"}
+            width={"12rem"}
             display={"flex"}
             alignItems={"center"}
             justifyContent={"center"}
