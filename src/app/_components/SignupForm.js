@@ -211,7 +211,7 @@ function SignupForm({ setStep, setEmail }) {
 
           <Text textAlign="center" fontSize="1.6rem">
             Have an account?{" "}
-            <Link href="/auth/login">
+            <Link href="/login">
               <Text as="span" fontWeight="600">
                 Log in
               </Text>

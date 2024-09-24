@@ -41,7 +41,7 @@ function LoginForm({ setStep, email, password, handleInput }) {
     >
       <form onSubmit={handleSubmit}>
         <Box
-          w="40rem"
+          width="45rem"
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"center"}
